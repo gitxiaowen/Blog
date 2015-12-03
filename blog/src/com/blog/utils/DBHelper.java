@@ -14,12 +14,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 /*******************************************
- * 	´´½¨±êÊ¶£ºĞÜĞ¡ÎÄ   2015.10.03
- * 	ÀàÃèÊö£ºÊı¾İ¿â²Ù×÷µÄ¹«¹²Àà
+* 	åˆ›å»ºæ ‡è¯†ï¼šç†Šå°æ–‡   2015.11.02
  * 
- * 	ĞŞ¸ÄÈÕÆÚ£º
- * 	ĞŞ¸ÄÔ­Òò£º
- * 	ĞŞ¸ÄÄÚÈİ£º
+ * 	ç±»æè¿°ï¼šæ•°æ®åº“æ“ä½œçš„å…¬å…±ç±»
+ * 
+ * 	ä¿®æ”¹å†…å®¹ï¼š
+ * 	ä¿®æ”¹æ—¶é—´ï¼š
+ * 	ä¿®æ”¹åŸå› ï¼š
  *******************************************/
 public class DBHelper {
 
@@ -30,7 +31,7 @@ public class DBHelper {
 	private static Connection conn=null;
 	
 	/*
-	 * ¼ÓÔØÇı¶¯
+	 * åŠ è½½é©±åŠ¨
 	 */
 	static
 	{
@@ -47,7 +48,7 @@ public class DBHelper {
 	}
 	
 	/**
-	 * »ñÈ¡Á¬½Ó
+	 * è·å¾—è¿æ¥
 	 */
 	public static Connection getConnection()
 	{
@@ -68,7 +69,7 @@ public class DBHelper {
 	}
 	
 	/**
-	 * ²»´ø²ÎÊıµÄÔö¡¢É¾¡¢¸Ä²Ù×÷
+	 * æ‰§è¡Œä¸å¸¦å‚æ•°çš„å¢ã€åˆ ã€æ”¹ç­‰æ“ä½œ
 	 * @throws Exception
 	 */
 	public static int NonQuery(String sql) throws Exception
@@ -84,7 +85,7 @@ public class DBHelper {
 	}
 	
 	/**
-	 * ²»´ø²ÎÊıµÄ²éÑ¯²Ù×÷
+	 * æ‰§è¡Œä¸å¸¦å‚æ•°çš„æŸ¥è¯¢æ“ä½œ
 	 * @param sql
 	 * @return
 	 * @throws Exception
@@ -102,10 +103,10 @@ public class DBHelper {
 	
 	
 	/**
-	 * ´øÓĞ²ÎÊıµÄ²åÈë¡¢É¾³ı¡¢ĞŞ¸Ä²Ù×÷
+	 * å¸¦å‚æ•°çš„éæŸ¥è¯¢æ“ä½œ
 	 * @param sql
 	 * @param args
-	 * @return ¸Ä±äµÄĞĞÊı
+	 * @return int
 	 * @throws Exception
 	 */
 	public static int NonQuery(String sql , Object[] args) throws Exception
@@ -124,7 +125,7 @@ public class DBHelper {
 	}
 
 	/**
-	 * ´øÓĞ²ÎÊıµÄ²éÑ¯²Ù×÷
+	 * å¸¦å‚æ•°çš„æŸ¥è¯¢æ“ä½œ
 	 * @param sql
 	 * @param args
 	 * @return
@@ -146,7 +147,7 @@ public class DBHelper {
 	}
 	
 	/*
-	 * ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
+	 * å…³é—­è¿æ¥
 	 */
 	public static void closeConn() throws Exception
 	{
@@ -157,7 +158,7 @@ public class DBHelper {
 	}
 	
 	/**	
-	 * ÉÏ´«ÎÄ¼ş£¬²ÎÊıÎªÎÄ¼şÂ·¾¶ºÍÆäËû²ÎÊı¶ÔÏó
+	 * ä¸Šä¼ å¤§æ–‡ä»¶
 	 * @param sql
 	 * @param path
 	 * @return
@@ -169,7 +170,7 @@ public class DBHelper {
 		InputStream in = new BufferedInputStream(new FileInputStream(file));
 		PreparedStatement ps = conn.prepareStatement(sql);
 		ps.setBinaryStream(1,in, (int)file.length());
-		//ÕâÀï£¬µÚÒ»¸ö²ÎÊı±ØĞëÊÇÎÄ¼şÂ·¾¶£¬ÆäËû²ÎÊı·ÅÔÚºóÃæ£¬Èç¹û²»ÊÇÕâÖÖÇé¿ö£¬×ÔĞĞ±àĞ´¶ÔÓ¦µÄÓï¾ä¡£
+		//è¿™é‡Œï¼Œå°†æ–‡ä»¶è·¯å¾„ä½œä¸ºç¬¬ä¸€ä¸ª
 		for(int i=0;i<args.length;i++)
 		{
 			ps.setObject(i+2, args[i]);
@@ -180,8 +181,7 @@ public class DBHelper {
 
  	
 	/*
-	 * Ö÷·½·¨£¬²âÊÔÁ¬½ÓÊÇ·ñ³É¹¦
-	 * ²âÊÔ²åÈë¡¢²éÑ¯¡¢¸üĞÂ²Ù×÷
+	 * æµ‹è¯•ç±»
 	 */
 	public static void main(String[] args) {
 	try
@@ -189,13 +189,13 @@ public class DBHelper {
 		Connection conn =DBHelper.getConnection();
 		if(conn!=null)
 		{
-			System.out.println("Êı¾İ¿âÁ¬½Ó³É¹¦£¡");
-			//²»´ø²ÎÊıµÄ²åÈë¡¢É¾³ı¡¢¸üĞÂ²âÊÔ
+			System.out.println("ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½");
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ë¡¢É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½
 //			String sql = "update user set Host='dolby' where User='dolby'";
 //			System.out.println(DBHelper.ExeSQL(sql));
 			
 			
-			//²»´ø²ÎÊıµÄ²éÑ¯²Ù×÷²âÊÔ
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			String sql ="select * from user";
 //			ResultSet rs = DBHelper.Query(sql);
 //			while(rs.next())
@@ -203,17 +203,17 @@ public class DBHelper {
 //				System.out.println(rs.getString("User"));
 //			}
 			
-			//´ø²ÎÊıµÄ²åÈë²Ù×÷µÄ²âÊÔ
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½
 //			String sql="insert into person values(?,?,?,?)";
 //			Object[] obj=new Object[]{"1","2","3","4"};
 //			int i=DBHelper.insert(sql, obj);
 //			if(i>0)
 //				System.out.println(i);
 //			else
-//				System.out.println("²åÈëÊ§°Ü£¡");
+//				System.out.println("ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 			
 			
-			//²åÈëÎÄ¼ş²Ù×÷
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
 
 //			String sql = "UPDATE user SET head=? WHERE uid=1";
 //			File file = new File("D:\\Courses\\Basical English\\Resources\\Al Pacino\\scent of woman.jpg");
@@ -223,12 +223,12 @@ public class DBHelper {
 //			int i = ps.executeUpdate();
 			
 			
-			//´ø²ÎÊıµÄÎÄ¼ş²åÈë²Ù×÷
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			Object[] parms = new Object[]{"1"};
 //			DBHelper.uploadfile("UPDATE user SET head=? WHERE uid = ?", "D:\\Courses\\Basical English\\Resources\\Al Pacino\\god father.jpg", parms);
 //			conn.close();
 
-			//¶ÁÈ¡ÉÏ´«µÄÎÄ¼ş£¬±£´æµ½D:\\temp\\ÖĞ²âÊÔÍê³É
+			//ï¿½ï¿½È¡ï¿½Ï´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æµ½D:\\temp\\ï¿½Ğ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			ResultSet rs = DBHelper.Query("SELECT head FROM user WHERE uid = '1'");
 //			while(rs.next())
 //			{
@@ -245,7 +245,7 @@ public class DBHelper {
 			
 		}
 		else
-			System.out.println("Êı¾İ¿âÁ¬½ÓÊ§°Ü£¡");
+			System.out.println("ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 	  }
 	catch(Exception ex)
 	  {
