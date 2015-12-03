@@ -1,5 +1,7 @@
 package com.blog.entity;
 
-public class Notes {
+public class Msg {
 
+	
+	
 }
