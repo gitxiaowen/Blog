@@ -176,6 +176,7 @@ public class DBHelper {
 			ps.setObject(i+2, args[i]);
 		}
 		int i = ps.executeUpdate();
+		conn.close();
 		return i;
 	}
 
@@ -189,46 +190,47 @@ public class DBHelper {
 		Connection conn =DBHelper.getConnection();
 		if(conn!=null)
 		{
-			System.out.println("���ݿ����ӳɹ���");
-			//���������Ĳ��롢ɾ�������²���
-//			String sql = "update user set Host='dolby' where User='dolby'";
-//			System.out.println(DBHelper.ExeSQL(sql));
+			System.out.println("连接成功！");
+			//不带参数的非查询操作
+//			String sql = "update user set uName='dolby' where uID='2015110101'";
+//			System.out.println(DBHelper.NonQuery(sql));
 			
 			
-			//���������Ĳ�ѯ��������
+			//不带参数的查询操作
 //			String sql ="select * from user";
 //			ResultSet rs = DBHelper.Query(sql);
 //			while(rs.next())
 //			{
-//				System.out.println(rs.getString("User"));
+//				System.out.println(rs.getString("uName"));
 //			}
 			
-			//�������Ĳ�������Ĳ���
-//			String sql="insert into person values(?,?,?,?)";
-//			Object[] obj=new Object[]{"1","2","3","4"};
-//			int i=DBHelper.insert(sql, obj);
+			//带参数的非查询操作
+//			String sql="insert into admin values(?,?,?)";
+//			Object[] obj=new Object[]{"3","2","3"};
+//			int i=DBHelper.NonQuery(sql, obj);
 //			if(i>0)
 //				System.out.println(i);
 //			else
-//				System.out.println("����ʧ�ܣ�");
+//				System.out.println("更新失败");
 			
 			
-			//�����ļ�����
+			//带参数的文件操作
 
-//			String sql = "UPDATE user SET head=? WHERE uid=1";
-//			File file = new File("D:\\Courses\\Basical English\\Resources\\Al Pacino\\scent of woman.jpg");
-//			InputStream in = new BufferedInputStream(new FileInputStream(file));
-//			PreparedStatement ps = conn.prepareStatement(sql);
-//			ps.setBinaryStream(1,in, (int)file.length());
-//			int i = ps.executeUpdate();
+			String sql = "UPDATE user SET uPicture=? WHERE uid=2015110101";
+			File file = new File("D:\\Courses\\Basical English\\Resources\\Al Pacino\\scent of woman.jpg");
+			InputStream in = new BufferedInputStream(new FileInputStream(file));
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setBinaryStream(1,in, (int)file.length());
+			int i = ps.executeUpdate();
+			System.out.println(i);
 			
 			
-			//���������ļ��������
+			//更新文件
 //			Object[] parms = new Object[]{"1"};
 //			DBHelper.uploadfile("UPDATE user SET head=? WHERE uid = ?", "D:\\Courses\\Basical English\\Resources\\Al Pacino\\god father.jpg", parms);
 //			conn.close();
 
-			//��ȡ�ϴ����ļ������浽D:\\temp\\�в������
+			//读取文件
 //			ResultSet rs = DBHelper.Query("SELECT head FROM user WHERE uid = '1'");
 //			while(rs.next())
 //			{
@@ -245,7 +247,7 @@ public class DBHelper {
 			
 		}
 		else
-			System.out.println("���ݿ�����ʧ�ܣ�");
+			System.out.println("数据库连接失败！");
 	  }
 	catch(Exception ex)
 	  {
