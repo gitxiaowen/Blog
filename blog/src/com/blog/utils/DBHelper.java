@@ -216,13 +216,21 @@ public class DBHelper {
 			
 			//带参数的文件操作
 
-			String sql = "UPDATE user SET uPicture=? WHERE uid=2015110101";
-			File file = new File("D:\\Courses\\Basical English\\Resources\\Al Pacino\\scent of woman.jpg");
-			InputStream in = new BufferedInputStream(new FileInputStream(file));
-			PreparedStatement ps = conn.prepareStatement(sql);
-			ps.setBinaryStream(1,in, (int)file.length());
-			int i = ps.executeUpdate();
-			System.out.println(i);
+//			String sql = "UPDATE user SET uPicture=? WHERE uid=2015110101";
+//			File file = new File("D:\\Courses\\Basical English\\Resources\\Al Pacino\\scent of woman.jpg");
+//			InputStream in = new BufferedInputStream(new FileInputStream(file));
+//			PreparedStatement ps = conn.prepareStatement(sql);
+//			ps.setBinaryStream(1,in, (int)file.length());
+//			int i = ps.executeUpdate();
+//			System.out.println(i);
+			String sql="select uID from user where uName=? and uPassword=?";
+			Object[] obj=new Object[]{"dolby","YmxvZw=="};
+			ResultSet res = DBHelper.Query(sql, obj);
+			while(res.next())
+			{
+				System.out.println(res.getRow());
+			}
+			
 			
 			
 			//更新文件

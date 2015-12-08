@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
+String username;
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
@@ -20,8 +21,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="./res/css/test.css">
   </head>
   
-  <body>
-  Hello World!
-<a href="Login">登录</a>
+  <body><label>用户名</label>
+  <form action="login" method="post">
+<input  placeholder="请输入用户名" name="username"><br>
+<input  placeholder="请输入密码" type="password" name="password"><br>
+<input type="submit" value="登录">
+</form>
   </body>
 </html>
