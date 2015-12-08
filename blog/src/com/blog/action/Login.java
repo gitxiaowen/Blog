@@ -54,6 +54,8 @@ public class Login extends ActionSupport {
 		ResultSet res=DBHelper.Query(sql, args);
 		if(res.next())
 		{
+			//成功登录，将跳转至主界面，同时存储用户信息。
+			ActionContext.getContext().getSession().put("user", getUsername());
 			System.out.println("登录成功!");
 			return SUCCESS;
 		}
