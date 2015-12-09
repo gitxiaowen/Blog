@@ -1,12 +1,26 @@
 package com.blog.utils;
 
 import java.io.UnsupportedEncodingException;
+/*******************************************
+* 	创建标识：熊小文   2015.11.25
+ * 
+ * 	类描述：数据库操作的公共类
+ * 
+ * 	修改内容：
+ * 	修改时间：
+ * 	修改原因：
+ *******************************************/
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
 public class Encrypt 
 {
+	/**
+	 * 使用Base64加密字符串
+	 * @param str
+	 * @return 加密后的字符串
+	 */
 	 public static String Encode(String str) {  
 	        byte[] b = null;  
 	        String s = null;  
@@ -21,7 +35,11 @@ public class Encrypt
 	        return s;  
 	    }  
 	  
-	    // 解密  
+	    /**
+	     * 使用Base64解密字符串
+	     * @param s
+	     * @return 解密后的字符串
+	     */
 	    public static String Decode(String s) 
 	    {  
 	        byte[] b = null;  
@@ -41,6 +59,7 @@ public class Encrypt
 	        }  
 	        return result;  
 	    }
+	    
 	    public static void main(String[] args) 
 	    {
 //	    	测试加密
