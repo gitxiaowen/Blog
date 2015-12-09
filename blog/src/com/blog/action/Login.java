@@ -9,6 +9,7 @@ import org.apache.struts2.ServletActionContext;
 import com.blog.entity.User;
 import com.blog.utils.DBHelper;
 import com.blog.utils.Encrypt;
+import com.blog.service.LoginService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -46,13 +47,8 @@ public class Login extends ActionSupport {
 
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
-		//验证登录过程，在数据库中查找对应的数据
-		String sql="SELECT uID FROM user WHERE uName=? AND uPassword=?";
-		Object[] args=new Object[2];
-		args[0]=getUsername();
-		args[1]=Encrypt.Encode(getPassword());
-		ResultSet res=DBHelper.Query(sql, args);
-		if(res.next())
+		//验证登录过程，在数据库中查找对应的数据,输入用户名/邮箱/手机号均可验证
+		if(LoginService.findUserbyName(getUsername(),getPassword())||LoginService.findUserbyEmail(getUsername(), getPassword())||LoginService.findUserbyPhone(getUsername(), getPassword()))
 		{
 			//成功登录，将跳转至主界面，同时存储用户信息。
 			ActionContext.getContext().getSession().put("user", getUsername());
