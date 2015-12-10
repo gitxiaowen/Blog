@@ -48,10 +48,11 @@ public class Login extends ActionSupport {
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		//验证登录过程，在数据库中查找对应的数据,输入用户名/邮箱/手机号均可验证
-		if(LoginService.findUserbyName(getUsername(),getPassword())||LoginService.findUserbyEmail(getUsername(), getPassword())||LoginService.findUserbyPhone(getUsername(), getPassword()))
+		String user=LoginService.findUser(getUsername(), getPassword());
+		if(user!=null)
 		{
 			//成功登录，将跳转至主界面，同时存储用户信息。
-			ActionContext.getContext().getSession().put("user", getUsername());
+			ActionContext.getContext().getSession().put("user", user);
 			System.out.println("登录成功!");
 			return SUCCESS;
 		}
