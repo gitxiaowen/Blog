@@ -2,16 +2,10 @@ package com.blog.action;
 
 import java.sql.ResultSet;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts2.ServletActionContext;
-
+import com.blog.dao.LoginDao;
 import com.blog.entity.User;
-import com.blog.utils.DBHelper;
-import com.blog.utils.Encrypt;
-import com.blog.service.LoginService;
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 
 
 
@@ -24,41 +18,67 @@ import com.opensymphony.xwork2.ActionSupport;
  * 	修改时间：
  * 	修改原因：
  *******************************************/
-public class Login extends ActionSupport {
+public class Login extends ActionSupport implements ModelDriven<User>{
 	
-	private String username;
-	private String password;
+	private User user=new User();
 	
-	public String getUsername() {
-		return username;
+	@Override
+	public User getModel()
+	{
+		if (user==null) {
+			User user = new User();
+			return user;
+		}
+		else
+		{
+			return user;
+		}
+		
+	}
+	public User getUser() {
+		return user;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser(User user) {
+		this.user = user;
 	}
+	
+	
+//	private String username;
+//	private String password;
+//	
+//	public String getUsername() {
+//		return username;
+//	}
+//
+//	public void setUsername(String username) {
+//		this.username = username;
+//	}
+//
+//	public String getPassword() {
+//		return password;
+//	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
 
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		//验证登录过程，在数据库中查找对应的数据,输入用户名/邮箱/手机号均可验证
-		String user=LoginService.findUser(getUsername(), getPassword());
-		if(user!=null)
-		{
-			//成功登录，将跳转至主界面，同时存储用户信息。
-			ActionContext.getContext().getSession().put("user", user);
-			System.out.println("登录成功!");
-			return SUCCESS;
-		}
-		else
-			return ERROR;
-		
+		System.out.println(user.getuName());
+//		String user=LoginService.findUser(getUsername(), getPassword());
+//		if(user!=null)
+//		{
+//			//成功登录，将跳转至主界面，同时存储用户信息。
+//			ActionContext.getContext().getSession().put("user", user);
+//			System.out.println("登录成功!");
+//			return SUCCESS;
+//		}
+//		else
+//			return ERROR;
+//		
+		return "success";
 	}
 
 }
