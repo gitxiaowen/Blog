@@ -1,6 +1,5 @@
 package com.blog.action;
 
-import java.sql.ResultSet;
 
 import com.blog.dao.LoginDao;
 import com.blog.entity.User;
@@ -21,20 +20,7 @@ import com.opensymphony.xwork2.ModelDriven;
 public class Login extends ActionSupport implements ModelDriven<User>{
 	
 	private User user=new User();
-	
-	@Override
-	public User getModel()
-	{
-		if (user==null) {
-			User user = new User();
-			return user;
-		}
-		else
-		{
-			return user;
-		}
-		
-	}
+
 	public User getUser() {
 		return user;
 	}
@@ -66,7 +52,7 @@ public class Login extends ActionSupport implements ModelDriven<User>{
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
 		//验证登录过程，在数据库中查找对应的数据,输入用户名/邮箱/手机号均可验证
-		System.out.println(user.getuName());
+		System.out.println(getModel().getuName());
 //		String user=LoginService.findUser(getUsername(), getPassword());
 //		if(user!=null)
 //		{
@@ -80,5 +66,11 @@ public class Login extends ActionSupport implements ModelDriven<User>{
 //		
 		return "success";
 	}
+
+@Override
+public User getModel() {
+	// TODO Auto-generated method stub
+	return user;
+}
 
 }

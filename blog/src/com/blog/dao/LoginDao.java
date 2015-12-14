@@ -39,6 +39,16 @@ public class LoginDao {
 		}
 	}
 	
+	/**
+	 * 判断用户表中是否已存在该用户名
+	 * @param uName
+	 * @return
+	 */
+	public static boolean isNameExist(String uName){
+		
+		return true;
+	}
+	
 	public static void main(String[] args) throws Exception {
 		String  res=findUser("dolby","blog");
 		System.out.println(res);
