@@ -16,42 +16,8 @@ import javax.mail.internet.MimeMessage.RecipientType;
 
 public class Email {
 	
-	public static void sendMail(String email, String emailMsg) throws AddressException, MessagingException 
+	public static void sendMail(String receiver, String emailMsg) throws AddressException, MessagingException 
 	{
-		
-		Properties props = new Properties();
-		props.setProperty("mail.transport.protocol", "SMTP");
-		props.setProperty("mail.host", "smtp.qq.com");
-		props.setProperty("mail.smtp.auth", "true");// 指定验证为true
-
-		// 创建验证器
-		Authenticator auth = new Authenticator() {
-			public PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("942911726@qq.com", "xxw883721");
-			}
-		};
-
-		Session session = Session.getInstance(props, auth);
-
-		// 2.创建一个Message，它相当于是邮件内容
-		Message message = new MimeMessage(session);
-
-		message.setFrom(new InternetAddress("942911726@qq.com")); // 设置发送者
-
-		message.setRecipient(RecipientType.TO, new InternetAddress(email)); // 设置发送方式与接收者
-
-		message.setSubject("用户激活");
-		// message.setText("这是一封激活邮件，请<a href='#'>点击</a>");
-
-		message.setContent(emailMsg, "text/html;charset=utf-8");
-
-		// 3.创建 Transport用于将邮件发送
-
-		Transport.send(message);
-				
-	}
-	public static void main(String[] args) throws AddressException, MessagingException {
-//		
 		 final Properties props = new Properties();
 	        /*
 	         * 可用的属性： mail.store.protocol / mail.transport.protocol / mail.host /
@@ -83,18 +49,22 @@ public class Email {
 	        InternetAddress form = new InternetAddress(
 	                props.getProperty("mail.user"));
 	        message.setFrom(form);
-
-	        // 设置收件人
-	        InternetAddress to = new InternetAddress("942911726@qq.com");
+	        InternetAddress to = new InternetAddress(receiver);
 	        message.setRecipient(RecipientType.TO, to);
 
 	        // 设置邮件标题
-	        message.setSubject("测试邮件");
+	        message.setSubject("继续完成您的竹帛账号注册");
 
 	        // 设置邮件的内容体
-	        message.setContent("<a href='http://www.fkjava.org'>测试的HTML邮件</a>", "text/html;charset=UTF-8");
+	        message.setContent(emailMsg, "text/html;charset=UTF-8");
 
 	        // 发送邮件
 	        Transport.send(message);
+	        
+				
+	}
+	public static void main(String[] args) throws AddressException, MessagingException {
+		sendMail("942911726@qq.com","dafsfajdslkf");
+		
 	}
 }
