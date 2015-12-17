@@ -3,10 +3,21 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-	<package name="default" namespace="/" extends="struts-default">
-		<action name="login" class="com.blog.action.Login">
-			<result name="success">/success.jsp</result>
-			<result name="error">/LoginFail.jsp</result>
+
+	
+	 <package name="Login" extends="struts-default" namespace="/admin/">
+		<action name="AdminLogin" class="com.blog.admin.action.Login">
+			<result name="success">Manage.jsp</result>
 		</action>
 	</package>
+	<!-- 管理员的struts2配置文件 -->
+<!-- 	<include file="struts-admin.xml"></include> -->
+	<!-- 用户的struts2配置文件 -->
+<!-- 	<include file="struts-user.xml"></include> -->
+	
+	<!--  package name="ajax" extends="json-default" namespace="/">
+		<action name="jsonAjax" class="com.blog.action.JsonDemo">
+		<result type="json"></result>
+		</action>
+	</package>-->
 </struts>

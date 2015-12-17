@@ -1,16 +1,10 @@
 package com.blog.action;
 
-import java.sql.ResultSet;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts2.ServletActionContext;
-
+import com.blog.dao.LoginDao;
 import com.blog.entity.User;
-import com.blog.utils.DBHelper;
-import com.blog.utils.Encrypt;
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 
 
 
@@ -23,45 +17,60 @@ import com.opensymphony.xwork2.ActionSupport;
  * 	修改时间：
  * 	修改原因：
  *******************************************/
-public class Login extends ActionSupport {
+public class Login extends ActionSupport implements ModelDriven<User>{
 	
-	private String username;
-	private String password;
+	private User user=new User();
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 	
-	public String getUsername() {
-		return username;
-	}
+	
+//	private String username;
+//	private String password;
+//	
+//	public String getUsername() {
+//		return username;
+//	}
+//
+//	public void setUsername(String username) {
+//		this.username = username;
+//	}
+//
+//	public String getPassword() {
+//		return password;
+//	}
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
 
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
-		//验证登录过程，在数据库中查找对应的数据
-		String sql="SELECT uID FROM user WHERE uName=? AND uPassword=?";
-		Object[] args=new Object[2];
-		args[0]=getUsername();
-		args[1]=Encrypt.Encode(getPassword());
-		ResultSet res=DBHelper.Query(sql, args);
-		if(res.next())
-		{
-			//成功登录，将跳转至主界面，同时存储用户信息。
-			ActionContext.getContext().getSession().put("user", getUsername());
-			System.out.println("登录成功!");
-			return SUCCESS;
-		}
-		else
-			return ERROR;
-		
+		//验证登录过程，在数据库中查找对应的数据,输入用户名/邮箱/手机号均可验证
+		System.out.println(getModel().getuName());
+//		String user=LoginService.findUser(getUsername(), getPassword());
+//		if(user!=null)
+//		{
+//			//成功登录，将跳转至主界面，同时存储用户信息。
+//			ActionContext.getContext().getSession().put("user", user);
+//			System.out.println("登录成功!");
+//			return SUCCESS;
+//		}
+//		else
+//			return ERROR;
+//		
+		return "success";
 	}
+
+@Override
+public User getModel() {
+	// TODO Auto-generated method stub
+	return user;
+}
 
 }

@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>错误页面</title>
 </head>
 <body>
-<h1>恭喜${sessionScope.user},你登录成功了!</h1>
+<h1>找不到页面...</h1>
 </body>
 </html>
