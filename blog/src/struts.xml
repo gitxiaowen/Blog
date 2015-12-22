@@ -13,7 +13,7 @@
 	<!-- 管理员的struts2配置文件 -->
  	<include file="struts-admin.xml"></include>
 	<!-- 用户的struts2配置文件 -->
- 	<!--  <include file="struts-user.xml"></include> -->
+ 	<include file="struts-user.xml"></include>
 	
 	<!--  package name="ajax" extends="json-default" namespace="/">
 		<action name="jsonAjax" class="com.blog.action.JsonDemo">
