@@ -18,15 +18,10 @@ public class Pager implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -1548081326895288476L;
-	
 	private int pageSize;
-	
 	private int curPage;
-	
 	private int totalRecord;
-	
 	private int totalPage;
-	
 	private List<Article> dataList;
 
 	/**
@@ -95,6 +90,7 @@ public class Pager implements Serializable{
 	public int getPageSize() {
 		return pageSize;
 	}
+	
 	public void setPageSize(int pageSize) {
 		this.pageSize = pageSize;
 	}
