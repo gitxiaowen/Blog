@@ -95,7 +95,7 @@ text-decoration:none;
 .sidebar-container{
 	width: 340px;
 	height: 329px;
-	background: #bababa;
+	background: red;
 	position: absolute;
 }
 .footer{
@@ -106,4 +106,79 @@ text-decoration:none;
 }
 .footer>a{
 	width: 24%;
+}
+
+
+/*login.html部分样式*/
+.overlay{
+	margin: auto;
+    position: fixed;
+    overflow: auto;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    z-index: 900;
+    background-color: rgba(255,255,255,0.97);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: #f0f0f0;
+    opacity: 60%;
+}
+.close{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	font-size: 3em;
+	font-weight: lighter;
+}
+input
+{
+	height: 35px;
+	width: 225px;
+	border: 1px solid #CCCCCC;
+	border-radius: 0em;
+}
+.container{
+	margin: auto;
+	padding-top: 230px;
+}
+h2{
+	font-family: sans-serif;
+	font-weight:bolder;
+	font-size: 3em;
+}
+h4{
+	padding-top: 5px;
+	color: gray;
+}
+.overlay a{
+	margin-top: 20px;
+	padding-top: 8px;
+	border: 1px solid rgba(0,0,0,0.15);
+	border-radius: 999em;
+	cursor: pointer;
+	height: 37px;
+	width: 112px;
+	vertical-align: middle;
+	
+}
+.login{
+	color:#02b875;
+	border-color: #02b875;
+}
+.login:hover{
+	color:#00ef73;
+	border-color: #00ef73;
+}
+.cancel{
+	color: rgba(0,0,0,0.44);
+}
+.cancel:hover{
+	color: rgba(0,0,0,0.74);
+	border: 1px solid rgba(0,0,0,0.75);
 }
