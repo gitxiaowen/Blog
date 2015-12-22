@@ -72,7 +72,7 @@
   <div class="sidebar-container">
     <div class="tags"></div>
     <div class="footer">
-      <a href="">帮助</a>
+      <a href="">帮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;助</a>
       <a href="">开源项目</a>
       <a href="">隐私条款</a>
       <a href="">关于我们</a>
