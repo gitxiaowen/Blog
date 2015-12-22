@@ -119,6 +119,10 @@ text-decoration:none;
 
 /*login.html部分样式*/
 .overlay{
+	-webkit-animation: onload 0.75s ;
+	-o-animation: onload 0.75s;
+	animation: onload 0.75s;
+	animation-timing-function:ease-in;
 	margin: auto;
     position: fixed;
     overflow: auto;
@@ -165,6 +169,7 @@ h4{
 	color: gray;
 }
 .overlay a{
+	
 	margin-top: 20px;
 	padding-top: 8px;
 	border: 1px solid rgba(0,0,0,0.15);
@@ -189,4 +194,12 @@ h4{
 .cancel:hover{
 	color: rgba(0,0,0,0.74);
 	border: 1px solid rgba(0,0,0,0.75);
+}
+
+/*动画属性*/
+@keyframes onload
+{
+	0%   {-webkit-transform:rotateX(90deg);}
+	50%  {-webkit-transform:rotateX(45deg);}
+	100% {-webkit-transform:rotateX(0deg);}
 }
