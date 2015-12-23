@@ -9,7 +9,7 @@
 <title>登录/注册</title>
 </head>
 <body>
- 	<div class="overlay">
+ 	<div class="overlay overlay-login">
 		<button class="close">×</button>
 		<div class="container">
 		<h2>Share your ideas</h2>

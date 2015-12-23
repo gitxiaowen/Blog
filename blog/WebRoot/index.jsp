@@ -9,7 +9,8 @@
 <title>首页</title>
 <link href="./res/css/bootstrap.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="./res/css/index.css">
-<script src="./js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="./res/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="./res/js/index.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 <div class="nav-right">
   <input class="search" placeholder="搜索文章">
   <a class="write">提笔</a>
-  <a class="login-reg">登录/注册</a>
+  <a href="#" class="login-reg">登录/注册</a>
 </div>
 </div>
 
@@ -84,5 +85,7 @@
 
 </div>
 </div>
+<jsp:include page="login.jsp"/>
+<jsp:include page="mailsent.jsp"/>
 </body>
 </html>
