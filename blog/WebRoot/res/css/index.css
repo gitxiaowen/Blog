@@ -10,6 +10,7 @@
 	-webkit-font-smoothing: antialiased;
 }
 a{
+	text-decoration:none;
 	display:inline-block;
 }
 ul{
@@ -119,10 +120,11 @@ text-decoration:none;
 
 /*login.html部分样式*/
 .overlay{
+	-webkit-transform-origin:bottom;
 	-webkit-animation: onload 0.75s ;
 	-o-animation: onload 0.75s;
 	animation: onload 0.75s;
-	animation-timing-function:ease-in;
+	animation-timing-function:linear;
 	margin: auto;
     position: fixed;
     overflow: auto;
