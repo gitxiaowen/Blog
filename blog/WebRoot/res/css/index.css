@@ -45,13 +45,23 @@ text-decoration:none;
 .nav-right{
 	float: right;
 	height: 100%;
-	width: 481px;
+	width: 530px;
+	display:inline-block;
 }
 .search{
-	border-radius: 5px;
-	border-color: rgba(0,0,0,0.8);
-	border: 6px;
+	border:1px solid rgba(0,0,0,0.2);
+	border-radius: 50em;
 	margin: auto;
+	display:inline-block;
+	padding-right:20px;
+	marigin-right:10px;
+}
+.search input{
+	width:150px;
+	border:0;
+}
+.search a {
+	/*background-image:"/res/imgs/search-default.png";*/
 }
 .write,.login-reg{
 	border: 1px solid rgba(0,0,0,0.15);
@@ -104,7 +114,7 @@ text-decoration:none;
 .sidebar-container{
 	width: 340px;
 	height: 329px;
-	background: red;
+	background: rgba(0,0,0,0.1);
 	position: absolute;
 }
 .footer{

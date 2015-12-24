@@ -20,6 +20,10 @@ $(document).ready(function() {
 		$(".overlay").css('display','block');
 		$('.overlay-mailsent').css('z-index','999');
 		$('.overlay-login').css('z-index','1');
+	});
+	$("input").focus(function(){
+		alert(3);
+		$(".search-btn").attr("src","res/imgs/search-active.png")
 	})
 	
 });

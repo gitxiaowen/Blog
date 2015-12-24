@@ -26,8 +26,11 @@
 </ul>
 </div>
 <div class="nav-right">
-  <input class="search" placeholder="搜索文章">
-  <a class="write">提笔</a>
+<div class="search">
+<a><img class="search-btn" src="res/imgs/search-default.png"></a>
+<input placeholder="搜索文章">
+</div>
+  <a class="write" href="/user/EditArticle.jsp">提笔</a>
   <a href="#" class="login-reg">登录/注册</a>
 </div>
 </div>
@@ -78,14 +81,14 @@
       <a href="">帮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;助</a>
       <a href="">开源项目</a>
       <a href="">隐私条款</a>
-      <a href="">关于我们</a>
+      <a href="aboutus.html">关于我们</a>
     </div>
   </div>
 
 
 </div>
 </div>
-<jsp:include page="login.jsp"/>
-<jsp:include page="mailsent.jsp"/>
+<jsp:include page="/user/login.jsp"/>
+<jsp:include page="/user/mailsent.jsp"/>
 </body>
 </html>

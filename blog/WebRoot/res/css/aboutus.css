@@ -1,0 +1,67 @@
+#title
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-family: SentyZHAO, verdana, sans-serif;
+	font-size: 3em;
+	color: white;
+}
+@font-face
+{
+	font-family: 'SentyZHAO';
+    src: url('../font/SentyZHAO.otf');
+}
+
+#fork
+{
+	position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+#team_profiles
+{
+	position: relative;
+	width: 40%;
+	height: 60%;
+	margin-left:50%;
+	margin-right: auto;
+	margin-top: auto;
+	background: red;
+}
+#aboutus
+{
+	background:#2DA94F;
+}
+.profiles
+{
+	top: 0;
+	background:white;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+}
+
+#profile_xxw 
+{
+	background:url("../imgs/xxw.jpg");
+}
+
+#xxw
+{
+	background: #2085A1;
+}
+#abiao {
+	background: #ED412D;
+}
+#zhao {
+	background: #4c4c4c;
+}
+#han {
+	background: #FD6720;
+}
+#lu {
+	background: #4EA63A;
+}
