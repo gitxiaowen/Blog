@@ -11,7 +11,7 @@
 		</action>
 	</package> -->
 	<!-- 管理员的struts2配置文件 -->
- 	<include file="struts-admin.xml"></include>
+ 	<!-- include file="struts-admin.xml"></include> -->
 	<!-- 用户的struts2配置文件 -->
  	<include file="struts-user.xml"></include>
 	

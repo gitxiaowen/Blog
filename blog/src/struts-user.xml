@@ -3,10 +3,12 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>  
-	<package name="ajax" extends="json-default" namespace="/">
-		<action name="jsonAjax" class="com.blog.action.JsonDemo">
-		
-		<result type="json"></result>
+
+	
+	<package name="article" extends="struts-default" namespace="/user">
+
+		<action name="Publish" class="com.blog.action.BlogActionction">
+		<result name="success">../index.jsp</result>
 		</action>
 	</package>
 </struts>

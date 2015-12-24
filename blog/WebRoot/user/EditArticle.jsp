@@ -8,15 +8,34 @@
 <script src="../ckeditor/ckeditor.js"></script>
 </head>
 <body>
- <form>
-     <textarea name="editor1" id="editor" rows="10" cols="80">
-                输入文章内容....
-     </textarea>
-     <script>
-     // Replace the <textarea id="editor1"> with a CKEditor
-     // instance, using default configuration.
-      CKEDITOR.replace( 'editor' );
-      </script>
-     </form>
+ <table width="100%" height="100%">
+ <form action="Publish" method="post">
+     <tr bgcolor="#F0F0F0">
+<td background="图片地址.jpg">
+<b><font color="white">■ 发表文章</font></b>
+</td>
+</tr>
+   <tr> <td align="left">【请输入文章的题目......】</td></tr>
+    <tr><td align="center"><input type=text  name="aTitle" id="title" style="width:100%;height:100%";text-align:left;vertical-align:middle" ></td>
+   </tr>                    
+    
+ 
+ <tr>
+ <td><textarea  class="ckeditor" name="aContent" id="content">
+                            输入文章内容....
+         </textarea>
+ </td>
+  </tr>
+      <!--    <script>
+           CKEDITOR.replace( 'content' );
+        </script> -->
+   <tr>
+       <td>
+       <input  type=submit value="发表帖子"/>
+       <input  type=reset value="取消发表"/>
+       </td>
+   </tr>
+   </form>
+  </table>
 </body>
 </html>
