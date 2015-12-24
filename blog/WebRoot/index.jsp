@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -30,8 +31,8 @@
 <a><img class="search-btn" src="res/imgs/search-default.png"></a>
 <input placeholder="搜索文章">
 </div>
-  <a class="write" href="/user/EditArticle.jsp">提笔</a>
-  <a href="#" class="login-reg">登录/注册</a>
+  <a class="write" href="./user/EditArticle.jsp">提笔</a>
+  <a href="./login.jsp" class="login-reg">登录/注册</a>
 </div>
 </div>
 
@@ -88,7 +89,5 @@
 
 </div>
 </div>
-<jsp:include page="/user/login.jsp"/>
-<jsp:include page="/user/mailsent.jsp"/>
 </body>
 </html>

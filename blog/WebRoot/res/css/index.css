@@ -9,6 +9,10 @@
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 }
+input：focus{
+    outline:none;
+    inline:none;
+}
 a{
 	text-decoration:none;
 	display:inline-block;
@@ -56,6 +60,9 @@ text-decoration:none;
 	padding-right:20px;
 	marigin-right:10px;
 }
+.search-btn{
+	cursor:pointer;
+}
 .search input{
 	width:150px;
 	border:0;
@@ -73,6 +80,8 @@ text-decoration:none;
 	vertical-align: middle;
 }
 .write{
+	margin-left:10px;
+	margin-right:18px;
 	padding-left:38px;
 	padding-top:8px;
 	color: rgba(0,0,0,0.44);
@@ -96,7 +105,7 @@ text-decoration:none;
 .article{
 	width: 600px;
 	height: 500px;
-	/*background: gray;*/
+	background: gray;
 	margin-bottom: 2px;
 	border-bottom:2px solid rgba(0,0,0,0.2);
 }
@@ -151,7 +160,7 @@ text-decoration:none;
     margin: 0;
     border: 0;
     background: #f0f0f0;
-    opacity: 60%;
+    opacity: 20%;
 }
 .close{
 	position: fixed;
