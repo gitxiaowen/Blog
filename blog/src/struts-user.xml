@@ -2,13 +2,15 @@
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
-<struts>  
-
-	
+<struts>  	
 	<package name="article" extends="struts-default" namespace="/user">
-
 		<action name="Publish" class="com.blog.action.BlogActionction">
 		<result name="success">../index.jsp</result>
+
+	<package name="login" extends="struts-default" namespace="/">
+		<action name="LoginAction" class="com.blog.action.LoginAction">
+		<result name="success"></result>
+
 		</action>
 	</package>
 </struts>

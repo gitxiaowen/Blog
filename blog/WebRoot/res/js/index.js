@@ -22,8 +22,13 @@ $(document).ready(function() {
 		$('.overlay-login').css('z-index','1');
 	});
 	$("input").focus(function(){
-		alert(3);
-		$(".search-btn").attr("src","res/imgs/search-active.png")
-	})
+		$(".search-btn").attr("src","res/imgs/search-active.png");
+		$(".search input").removeAttr("style");
+		
+	});
+	$("input").focusout(function(){
+		$(".search-btn").attr("src","res/imgs/search-default.png");
+		
+	});
 	
 });

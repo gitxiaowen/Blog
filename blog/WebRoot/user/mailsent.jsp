@@ -5,8 +5,8 @@
   <head>
     <title>邮件</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="./res/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="./res/css/index.css" type="text/css" rel="stylesheet">
+    <link href="../res/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../res/css/index.css" type="text/css" rel="stylesheet">
 
   </head>
   <style type="text/css">
