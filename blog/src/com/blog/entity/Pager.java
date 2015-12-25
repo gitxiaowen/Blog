@@ -22,7 +22,7 @@ public class Pager implements Serializable{
 	private int curPage;
 	private int totalRecord;
 	private int totalPage;
-	private List<Object> dataList;
+	private List<Article> dataList;
 
 	/**
 	 * 空的构造函数
@@ -37,13 +37,13 @@ public class Pager implements Serializable{
 	 * @param pageSize 页面大小
 	 * @param listArticle 所有的文章数据
 	 */
-	public Pager(int pageNum, int pageSize,List<Object> listObject)
+	public Pager(int pageNum, int pageSize,List<Article> listArticle)
 	{
-		if(listObject==null)
+		if(listArticle==null)
 		{
 			return;
 		}
-		this.totalRecord=listObject.size();
+		this.totalRecord=listArticle.size();
 		this.pageSize=pageSize;
 		this.totalPage=this.totalRecord/this.pageSize;
 		if(this.totalRecord%this.pageSize!=0)
@@ -68,7 +68,7 @@ public class Pager implements Serializable{
 		{
 			end=this.pageSize*this.curPage;
 		}
-		this.dataList=listObject.subList(from, end);
+		this.dataList=listArticle.subList(from, end);
 	}
 	
 	/**
@@ -79,13 +79,13 @@ public class Pager implements Serializable{
 	 * @param totalPage
 	 * @param dataList
 	 */
-	public Pager(int pageSize, int curPage, int totalRecord, int totalPage, List<Object> objectList) {
+	public Pager(int pageSize, int curPage, int totalRecord, int totalPage, List<Article> listArticle) {
 		super();
 		this.pageSize = pageSize;
 		this.curPage = curPage;
 		this.totalRecord = totalRecord;
 		this.totalPage = totalPage;
-		this.dataList = objectList;
+		this.dataList = listArticle;
 	}
 	public int getPageSize() {
 		return pageSize;
@@ -112,11 +112,11 @@ public class Pager implements Serializable{
 	public void setTotalPage(int totalPage) {
 		this.totalPage = totalPage;
 	}
-	public List<Object> getDataList() {
+	public List<Article> getDataList() {
 		return dataList;
 	}
-	public void setDataList(List<Object> objectList) {
-		this.dataList = objectList;
+	public void setDataList(List<Article> listArticle) {
+		this.dataList = listArticle;
 	}
 	
 	
