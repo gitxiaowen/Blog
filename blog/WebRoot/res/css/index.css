@@ -106,7 +106,7 @@ text-decoration:none;
 .article{
 	width: 600px;
 	height: 500px;
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.1);
 	margin-bottom: 10px;
 	border-bottom:2px solid rgba(0,0,0,0.2);
 }
@@ -120,13 +120,13 @@ text-decoration:none;
 	
 }
 .article .author,.article .tag{
+	cursor:pointer;
 	color:#02b875;
 	margin-left:10px;
 	transform:translateY(-25px);
 }
 .article .tag
-{
-	margin-left:20px;
+{	margin-left:20px;
 }
 .readcount,.publishtime{
 	transform:translateY(-105px);
@@ -205,7 +205,8 @@ input
 }
 .container{
 	margin: auto;
-	padding-top: 230px;
+	padding-top: 20px;
+	padding-left:50px;
 }
 h2{
 	font-family: sans-serif;

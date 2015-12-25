@@ -40,42 +40,92 @@
 <div class="container">
 <!-- 主题文章部分 -->
 <ul class="articles">
-  <li class="article">
+<li class="article">
 	<div class="a-top">
 		<a class="profile"></a>
 		<a class="author">我是作者</a><a class="tag">父标签</a>
 		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
 		<h2>这是文章的标题！</h2>
-		<a class="content">我都说了这是文章的内容，你就不要再乱搞了！</a>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
 	</div>
   </li>
-  <li class="article">
-  
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
-  <li class="article">
-
-  This is Passage!</li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div>
+	</li>
+<li class="article">
+ <div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div>
+	</li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div>
+</li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div>
+	</li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div></li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div></li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div></li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div></li>
+<li class="article">
+<div class="a-top">
+		<a class="profile"></a>
+		<a class="author">我是作者</a><a class="tag">父标签</a>
+		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
+		<h2>这是文章的标题！</h2>
+		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
+	</div>
+</li>
 </ul>
 
 
