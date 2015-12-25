@@ -33,6 +33,7 @@
 </div>
   <a class="write" href="./user/EditArticle.jsp">提笔</a>
   <a href="./login.jsp" class="login-reg">登录/注册</a>
+
 </div>
 </div>
 
