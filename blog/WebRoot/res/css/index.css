@@ -208,6 +208,9 @@ input
 	padding-top: 20px;
 	padding-left:50px;
 }
+.overlay-login,.overlay-mailsent{
+	padding-top:200px;
+}
 h2{
 	font-family: sans-serif;
 	font-weight:bolder;
@@ -217,8 +220,7 @@ h4{
 	padding-top: 5px;
 	color: gray;
 }
-.overlay a{
-	
+.overlay a{	
 	margin-top: 20px;
 	padding-top: 8px;
 	border: 1px solid rgba(0,0,0,0.15);

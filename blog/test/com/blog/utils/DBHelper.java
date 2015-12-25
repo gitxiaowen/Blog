@@ -1,5 +1,2 @@
-<<<<<<< HEAD
-﻿//单元测试类ghgjkhhbkjbjk
-=======
-﻿//单元测试类yyfghjgjhgjk
->>>>>>> master
+//单元测试类，暂不打算完成！
+
