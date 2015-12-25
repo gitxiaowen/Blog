@@ -3,7 +3,7 @@ package com.blog.entity;
 import java.io.Serializable;
 import java.util.List;
 /**
- * 类标识：文章实体的分页类
+ * 类标识：文章实体和评论实体的分页类
  * 
  * 创建时间：2015年12月22日17:01:31
  * 
@@ -22,7 +22,7 @@ public class Pager implements Serializable{
 	private int curPage;
 	private int totalRecord;
 	private int totalPage;
-	private List<Article> dataList;
+	private List<Object> dataList;
 
 	/**
 	 * 空的构造函数
@@ -37,13 +37,13 @@ public class Pager implements Serializable{
 	 * @param pageSize 页面大小
 	 * @param listArticle 所有的文章数据
 	 */
-	public Pager(int pageNum, int pageSize,List<Article> listArticle)
+	public Pager(int pageNum, int pageSize,List<Object> listObject)
 	{
-		if(listArticle==null)
+		if(listObject==null)
 		{
 			return;
 		}
-		this.totalRecord=listArticle.size();
+		this.totalRecord=listObject.size();
 		this.pageSize=pageSize;
 		this.totalPage=this.totalRecord/this.pageSize;
 		if(this.totalRecord%this.pageSize!=0)
@@ -68,7 +68,7 @@ public class Pager implements Serializable{
 		{
 			end=this.pageSize*this.curPage;
 		}
-		this.dataList=listArticle.subList(from, end);
+		this.dataList=listObject.subList(from, end);
 	}
 	
 	/**
@@ -79,13 +79,13 @@ public class Pager implements Serializable{
 	 * @param totalPage
 	 * @param dataList
 	 */
-	public Pager(int pageSize, int curPage, int totalRecord, int totalPage, List<Article> dataList) {
+	public Pager(int pageSize, int curPage, int totalRecord, int totalPage, List<Object> objectList) {
 		super();
 		this.pageSize = pageSize;
 		this.curPage = curPage;
 		this.totalRecord = totalRecord;
 		this.totalPage = totalPage;
-		this.dataList = dataList;
+		this.dataList = objectList;
 	}
 	public int getPageSize() {
 		return pageSize;
@@ -112,11 +112,11 @@ public class Pager implements Serializable{
 	public void setTotalPage(int totalPage) {
 		this.totalPage = totalPage;
 	}
-	public List<Article> getDataList() {
+	public List<Object> getDataList() {
 		return dataList;
 	}
-	public void setDataList(List<Article> dataList) {
-		this.dataList = dataList;
+	public void setDataList(List<Object> objectList) {
+		this.dataList = objectList;
 	}
 	
 	

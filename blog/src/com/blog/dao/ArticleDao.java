@@ -19,16 +19,13 @@ public class ArticleDao {
 	public List<Article> allArticle()
 	{
 		List<Article> listArticle=new  ArrayList<Article>();
-		String sql="select * from article";
+		String sql="select * from article order by aPublishDate desc";
 		try {
 			ResultSet res=DBHelper.Query(sql);
 			while(res.next())
 			{
 				
 			}
-			
-			
-			
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
