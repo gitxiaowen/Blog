@@ -26,9 +26,6 @@
          </textarea>
  </td>
   </tr>
-      <!--    <script>
-           CKEDITOR.replace( 'content' );
-        </script> -->
    <tr>
        <td>
        <input  type=submit value="发表帖子"/>
