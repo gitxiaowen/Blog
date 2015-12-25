@@ -14,6 +14,7 @@ input：focus{
     inline:none;
 }
 a{
+	color:black;
 	text-decoration:none;
 	display:inline-block;
 }
@@ -105,9 +106,35 @@ text-decoration:none;
 .article{
 	width: 600px;
 	height: 500px;
-	background: gray;
-	margin-bottom: 2px;
+	background: rgba(0,0,0,0.2);
+	margin-bottom: 10px;
 	border-bottom:2px solid rgba(0,0,0,0.2);
+}
+.article .profile{
+	width:45px;
+	height:45px;
+	margin-top:5px;
+	margin-left:5px;
+	background-image:-webkit-linear-gradient(top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%);
+	border-radius:50%;
+	
+}
+.article .author,.article .tag{
+	color:#02b875;
+	margin-left:10px;
+	transform:translateY(-25px);
+}
+.article .tag
+{
+	margin-left:20px;
+}
+.readcount,.publishtime{
+	transform:translateY(-105px);
+	transform:translateX(-122px);
+	font-color:gray;
+}
+.a-top{
+	position:relative;
 }
 .sidebar{
 	height: 2000px;
