@@ -22,8 +22,15 @@ $(document).ready(function() {
 		$('.overlay-login').css('z-index','1');
 	});
 	$("input").focus(function(){
-		alert(3);
-		$(".search-btn").attr("src","res/imgs/search-active.png")
-	})
+		$(".search-btn").attr("src","res/imgs/search-active.png");
+		$(".search input").removeAttr("placeholder");
+		$(".search").css("border-color","#02b875");
+		
+	});
+	$("input").blur(function(){
+		$(".search-btn").attr("src","res/imgs/search-default.png");
+		$("input").attr("placeholder","搜索文章");
+		$(".search").css("border-color","rgba(0,0,0,0.2)");
+	});
 	
 });

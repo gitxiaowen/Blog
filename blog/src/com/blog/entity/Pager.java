@@ -3,7 +3,7 @@ package com.blog.entity;
 import java.io.Serializable;
 import java.util.List;
 /**
- * 类标识：文章实体的分页类
+ * 类标识：文章实体和评论实体的分页类
  * 
  * 创建时间：2015年12月22日17:01:31
  * 
@@ -79,13 +79,13 @@ public class Pager implements Serializable{
 	 * @param totalPage
 	 * @param dataList
 	 */
-	public Pager(int pageSize, int curPage, int totalRecord, int totalPage, List<Article> dataList) {
+	public Pager(int pageSize, int curPage, int totalRecord, int totalPage, List<Article> listArticle) {
 		super();
 		this.pageSize = pageSize;
 		this.curPage = curPage;
 		this.totalRecord = totalRecord;
 		this.totalPage = totalPage;
-		this.dataList = dataList;
+		this.dataList = listArticle;
 	}
 	public int getPageSize() {
 		return pageSize;
@@ -115,8 +115,8 @@ public class Pager implements Serializable{
 	public List<Article> getDataList() {
 		return dataList;
 	}
-	public void setDataList(List<Article> dataList) {
-		this.dataList = dataList;
+	public void setDataList(List<Article> listArticle) {
+		this.dataList = listArticle;
 	}
 	
 	

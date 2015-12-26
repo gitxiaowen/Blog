@@ -7,6 +7,28 @@ import com.blog.utils.DBHelper;
 import com.blog.utils.Encrypt;
 
 public class LoginDao {
+	public LoginDao(){}
+	
+	public static boolean isNewUser(String email) 
+	{
+		String sql="select uID from user where uEmail=?";
+		Object[] args=new Object[1];
+		args[0]=email;
+		ResultSet res;
+		try {
+			res = DBHelper.Query(sql, args);
+			if((res!=null)&&(res.next()))
+			{
+				return true;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("查找数据异常！");
+		}
+		
+		return false;
+	}
+	
 
 	/**
 	 * 根据用户名、邮箱、手机号和密码判断用户是否存在
