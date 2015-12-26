@@ -48,7 +48,7 @@
 <a><img class="search-btn" src="res/imgs/search-default.png"></a>
 <input placeholder="搜索文章">
 </div>
-  <a class="write" href="/blog/user/EditArticle.jsp">提笔</a>
+  <a class="write" href="/blog/manager/article_add.jsp">提笔</a>
   <a href="login.jsp" class="login-reg">登录/注册</a>
 
 </div>
