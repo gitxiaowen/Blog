@@ -19,11 +19,9 @@
 		<h1>竹博网</h1>
 		<h4>我们已经向您的邮箱发送了一个链接来创建账户</h4>
 		<h4>请检查您的收件箱</h4>
-		<a href="#" class="login">好的</a> <br>
-		
-		
+		<a href="/blog/index.jsp" class="login">好的</a><br>
 	</div>
-	<a href="#" style="font-size:10px;color:rgba(0,0,0,0.5);">登录有问题？</a></div>
+	<a  class="question" href="mailto:gitxiaowen@gmail.com" style="font-size:10px;color:rgba(0,0,0,0.5);">登录有问题？</a></div>
 
   </body>
 </html>
