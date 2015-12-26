@@ -5,6 +5,9 @@ import java.util.List;
 
 import com.blog.entity.*;
 import com.blog.utils.DBHelper;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import com.sun.org.apache.xpath.internal.Arg;
 
 /**
  * 类标识：文章相关的数据操作类
@@ -87,6 +90,11 @@ public class ArticleDao {
 		}
 		return listArticle;
 	}
+	/**
+	 * 添加文章
+	 * @param 
+	 * @return
+	 */
 	
 	public static int getMaxID() throws Exception
 	{
@@ -110,5 +118,18 @@ public class ArticleDao {
 		args[3]=author;
 		args[4]=type;
 		return DBHelper.NonQuery(sql, args);
+	}
+	/**
+	 * 删除文章
+	 * @param tID
+	 * @return
+	 */
+	public int deleteArticle(String aID){
+		String sql="delete from article where aID='?";
+		return 0;
+	}
+	public int updateArticle(){
+		String sql="update into article()values()";
+		return 0;
 	}
 } 
