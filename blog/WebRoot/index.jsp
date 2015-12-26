@@ -54,7 +54,7 @@ $(document).ready(function(){
 <input class="searchinput" placeholder="搜索文章">
 </div>
   <a class="write" href="/blog/user/EditArticle.jsp">提笔</a>
-  <% if(request.getSession().getAttribute("user")==null) 
+  <% if(request.getSession().getAttribute("user")==null)
   	out.print("<a href=\"login.jsp\" class=\"login-reg\">登录/注册</a>");
   	else{
 	  out.print("<span class=\"add-on icon\"><i class=\"icon-bell-alt\"></i></span>");

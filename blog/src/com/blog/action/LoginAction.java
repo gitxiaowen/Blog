@@ -43,12 +43,12 @@ public class LoginAction extends ActionSupport {
 		//如果为新用户，发送创建账户的邮件，并插入数据库中
 		if(!LoginDao.isNewUser(getEmail()))
 		{//发送邮件
-			//Email.sendMail(getEmail(), "");
 			//注册此账户
 			UserDao ud=new UserDao();
 			ud.RegUser(getEmail());	
 			String token="";
-			token=Encrypt.Encode(ud.getToken(getEmail()));		
+			token=Encrypt.Encode(ud.getToken(getEmail()));	
+			Email.sendMail(getEmail(), Email.getMessage("http://localhost/blog/callbackAction?token="+token));
 			System.out.println(token);
 		}
 		else

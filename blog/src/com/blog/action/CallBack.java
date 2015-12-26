@@ -21,15 +21,18 @@ import com.opensymphony.xwork2.ActionSupport;
 */
 public class CallBack extends ActionSupport {
 
-	private String callback;
+	private String token;
 	
-	public String getCallback() {
-		return callback;
+	
+	public String getToken() {
+		return token;
 	}
 
-	public void setCallback(String callback) {
-		this.callback = callback;
+
+	public void setToken(String token) {
+		this.token = token;
 	}
+
 
 	/* (non-Javadoc)
 	 * @see com.opensymphony.xwork2.ActionSupport#execute()
@@ -37,9 +40,11 @@ public class CallBack extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		// 收到回执邮件，登录并启动会话
+		System.out.println("确认收到回执");
 		 ActionContext actionContext = ActionContext.getContext();
 		 Map session = actionContext.getSession();
-		 session.put("user", Encrypt.Decode(callback));
+		 session.put("user",Encrypt.Decode(getToken()));
+		 System.out.println("添加session成功"+token);
 		return SUCCESS;
 	}
 }
