@@ -1,2 +1,0 @@
-<%@page pageEncoding="UTF-8"%>
- <nav id="topnav"><a href="../index/index">首页</a><a href="../about/about">关于我</a><a href="../article/article">慢生活</a><a href="../album/album">我的相册</a><a href="../critique/critique">留言板</a></nav>
