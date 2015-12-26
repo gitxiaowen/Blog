@@ -10,52 +10,45 @@
 <link href="../res/css/base.css" rel="stylesheet"/>
 <link href="../res/css/style.css" rel="stylesheet"/>
 <link href="../res/css/media.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+<style type="text/css">
+/*为段落定义样式*/
+input {border:1px solid;border-color:green;}
+span {color:#099;}
+</style>
 </head>
 <body>
 <div class="ibody">
 <header>
     <h1>竹帛网</h1>
     <h2>新意是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
-    <div class="logo"><a href="../index.jsp"></a></div>
-    <%@ include file="../manager_nav.jsp" %>
+    <div><a href="../index.jsp"></a></div>
+    <%@ include file="../manage_nav.jsp" %>
     </header>
 <article>
 <h2 class="about_h">您现在的位置是：<a href="../index.jsp">首页</a>><a href="1/">写博客</a></h2>
+ 
+ <s:form action="article_add" method="post" width="100%" height="100%">
  <table width="100%" height="100%">
- <form action="../manage/article_add" method="post">
-     <tr bgcolor="#F0F0F0">
-</tr>
            <tr>
-	    		<td><input name="article.title" style="width:100%;font-size:12pt;text-align:center;" value="请在这里输入标题"/></td>
+	    		<td><input name="aTitle" style="width:100%;font-size:12pt;text-align:center;" value="请在这里输入标题"/></td>
     		</tr> 
-    		<tr>
-	    		<td><span>文章配图:</span><input type="file" name="some"/></td>
-    		</tr>              
-    
  
  <tr>
- <td><textarea  class="ckeditor" name="article.content" id="content">
+ <td><textarea  class="ckeditor" name="aContent" id="content">
                             输入文章内容....
          </textarea>
  </td>
   </tr>
   	<td>
-    				<span>作者:</span><input name="article.editer"  style="width:90px"/>
-	    			<span>关键词:</span><input name="article.keywords"  style="width:90px"/>
-	    			<span>分类:</span><input name="article.type"  style="width:90px"/>
-	    			<span>设为推荐:</span>
-	    				<input name="article.notice" type="radio" value="1" />是
-		 				<input name="article.notice" type="radio" value="2" checked/>否
-	    		</td>
-    		</tr>
-   <tr>
-       <td>
-       <input  type=submit value="发表帖子"/>
-       <input  type=reset value="取消发表"/>
+    				<span>作者:</span><input name="aAuthor"  style="width:100px"/>
+	    			<span>分类:</span><input name="aType"  style="width:100px"/>
+                    <input  type=submit value="发表帖子"/>
+                    <input  type=reset value="取消发表"/>
        </td>
-   </tr>
-   </form>
-  </table>
+   </table>
+   </s:form>
+  
   </article>
   <aside>
   <%@ include file="../rnav.jsp" %> 
@@ -74,7 +67,7 @@
        </s:iterator>
       </ul>
       <h2>
-        <p>栏目推荐</p>
+        <p>最新推荐</p>
       </h2>
       <ul>
        <s:iterator value="recommendArticles" >
@@ -87,7 +80,7 @@
       <ul class="pl_n">
         <s:iterator value="critiques" >
         <dl>
-          <dt><img src="../include/images/s8.jpg"> </dt>
+          <dt><img src="../res/imgs/s8.jpg"> </dt>
           <dt> </dt>
           <dd><s:property value="name"/>
             <time><s:property value="time"/></time>

@@ -1,11 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>My JSP 'manager_nav.jsp' starting page</title>
-
+    <base href="<%=basePath%>">
+    
+    <title>My JSP 'article_manage.jsp' starting page</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,9 +23,6 @@
   </head>
   
   <body>
-  <a href="../manage/about">关于我</a>
-  <a href="../index.jsp">博客首页</a>
-  <a href="../manage/album">管理相册</a>
-  <a href="../manage/critique">留言板</a>
+    This is my JSP page. <br>
   </body>
 </html>

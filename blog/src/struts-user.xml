@@ -2,16 +2,17 @@
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
-<struts>  	
+<struts> 
+<!--文章管理操作的action  --> 	
 	<package name="article" extends="struts-default" namespace="/user">
-		<action name="Publish" class="com.blog.action.BlogActionction">
+		<action name="article_add" class="com.blog.action.ArticleAddAction">
 		<result name="success">../index.jsp</result>
 		</action>
 	</package>
+<!--用户登陆的action  -->
 	<package name="login" extends="struts-default" namespace="/">
 		<action name="LoginAction" class="com.blog.action.LoginAction">
-		<result name="success"></result>
-
+		<result name="success">../index.jsp</result>
 		</action>
-	</package>
+		</package>
 </struts>
