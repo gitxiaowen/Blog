@@ -23,14 +23,15 @@ $(document).ready(function() {
 	});
 	$("input").focus(function(){
 		$(".search-btn").attr("src","res/imgs/search-active.png");
-		$(".search input").removeAttr("placeholder");
 		$(".search").css("border-color","#02b875");
-		
+    	$(".search").css("-webkit-box-shadow","inset 0px 0px 1px #02b875");
+    	$(".search input").css("background","rgba(0,239,115,0.1");
 	});
 	$("input").blur(function(){
 		$(".search-btn").attr("src","res/imgs/search-default.png");
-		$("input").attr("placeholder","搜索文章");
 		$(".search").css("border-color","rgba(0,0,0,0.2)");
+		$(".search").css("-webkit-box-shadow","0px 0px 0px #000000");
+		$(".search input").css("background","rgb(255, 255, 255)");
 	});
 	
 });

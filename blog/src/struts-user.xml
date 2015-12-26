@@ -3,15 +3,25 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>  	
+	<package name="com.blog.action" extends="struts-default" namespace="/">
+		<!-- 邮件回执Action -->
+		<action name="callbackAction" class="com.blog.action.CallBack">
+		<result name="success">index.jsp</result>
+		</action>
+		<!-- 查找按钮的Action -->
+		<action name="SearchAction" class="">
+		
+		</action>
+	</package>
+	<!-- 发布文章的Action -->
 	<package name="article" extends="struts-default" namespace="/user">
-		<action name="Publish" class="com.blog.action.BlogActionction">
+		<action name="Publish" class="com.blog.action.BlogAction">
 		<result name="success">../index.jsp</result>
 		</action>
 	</package>
 	<package name="login" extends="struts-default" namespace="/">
 		<action name="LoginAction" class="com.blog.action.LoginAction">
-		<result name="success"></result>
-
+		<result name="success">user/mailsent.jsp</result>
 		</action>
 	</package>
 </struts>

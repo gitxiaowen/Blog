@@ -21,16 +21,21 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>首页</title>
-<link href="./res/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./res/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./res/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="./res/css/index.css">
 <script src="./res/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="./res/js/index.js" type="text/javascript"></script>
 <script>
-
-
+$(document).ready(function(){
+	$(".search-btn").click(function(){
+		var tag=$(".searchinput").val();
+		alert(tag);
+		$(".search a']").attr('href','SearchAction?tag='+tag);
+	});
+});
 </script>
 </head>
-
 <body>
 
 <!--navbar部分-->
@@ -46,10 +51,17 @@
 <div class="nav-right">
 <div class="search">
 <a><img class="search-btn" src="res/imgs/search-default.png"></a>
-<input placeholder="搜索文章">
+<input class="searchinput" placeholder="搜索文章">
 </div>
   <a class="write" href="/blog/user/EditArticle.jsp">提笔</a>
-  <a href="login.jsp" class="login-reg">登录/注册</a>
+  <% if(request.getSession().getAttribute("user")==null)
+  	out.print("<a href=\"login.jsp\" class=\"login-reg\">登录/注册</a>");
+  	else{
+	  out.print("<span class=\"add-on icon\"><i class=\"icon-bell-alt\"></i></span>");
+	  out.print("<a class=\"loginpic\"></a>");
+  }
+  %>
+  
 
 </div>
 </div>
@@ -58,7 +70,24 @@
 <div class="container">
 <!-- 主题文章部分 -->
 <ul class="articles">
-<li class="article">
+
+<% for(int i=0;i<list.size();i++)
+	{
+	out.print("<li class=\"article\"><div class=\"a-top\"><a class=\"profile\"></a>");
+	out.print("<a class=\"author\">");
+	out.print(UserDao.UserNameByID(list.get(i).getAuthor()));
+	out.print("</a><a class=\"tag\">");
+	out.print(ad.tNamebyID(list.get(i).getaType()));
+	out.print("</a><a class=\"publishtime\">");
+	out.print(list.get(i).getaPublishDate().toString());
+	out.print(" ·</a><a class=\"readcount\">");
+	out.print(list.get(i).getaView()+"人已阅</a>");
+	out.print("<h2>"+list.get(i).getaTitle()+"</h2>");
+	out.print("<div class=\"content\" href=\"#\">");
+	out.print(list.get(i).getaContent()+"</div>");
+	out.print("</div></li>");
+	}%>
+<!-- li class="article">
 	<div class="a-top">
 		<a class="profile"></a>
 		<a class="author">我是作者</a><a class="tag">父标签</a>
@@ -143,7 +172,7 @@
 		<h2>这是文章的标题！</h2>
 		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
 	</div>
-</li>
+</li> -->
 </ul>
 
 

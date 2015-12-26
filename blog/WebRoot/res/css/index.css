@@ -60,6 +60,7 @@ text-decoration:none;
 	display:inline-block;
 	padding-right:20px;
 	marigin-right:10px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .075);
 }
 .search-btn{
 	cursor:pointer;
@@ -102,6 +103,25 @@ text-decoration:none;
 	color:#00ef73;
 	border-color: #00ef73;
 }
+.add-on,.loginpic{
+	font-size:1.4em;
+	cursor:pointer;
+}
+.icon-bell-alt{
+	margin-top:10px;
+}
+.add-on:hover{
+	color:blue;
+}
+.loginpic{
+	display:inline-block;
+	width:25px;
+	height:25px;
+	background:red;
+	border-radius:50%;
+	margin-left:40px;
+	transform:translateY(10px);
+}
 /**文章主体部分的样式*/
 .article{
 	width: 600px;
@@ -130,7 +150,7 @@ text-decoration:none;
 }
 .readcount,.publishtime{
 	transform:translateY(-105px);
-	transform:translateX(-122px);
+	transform:translateX(-110px);
 	font-color:gray;
 }
 .a-top{
@@ -145,7 +165,7 @@ text-decoration:none;
 	position: absolute;
 	top: 0;
 	right: 0;
-	margin-top: 65px;
+	margin-top: 85px;
 }
 .sidebar-container{
 	width: 340px;
@@ -203,6 +223,10 @@ input
 	border: 1px solid #CCCCCC;
 	border-radius: 0em;
 }
+.profile
+{
+	
+}
 .container{
 	margin: auto;
 	padding-top: 20px;
@@ -219,6 +243,9 @@ h2{
 h4{
 	padding-top: 5px;
 	color: gray;
+}
+.content{
+	cursor:pointer;
 }
 .overlay a{	
 	margin-top: 20px;
@@ -245,6 +272,9 @@ h4{
 .cancel:hover{
 	color: rgba(0,0,0,0.74);
 	border: 1px solid rgba(0,0,0,0.75);
+}
+.question{
+	margin-left:30px;
 }
 
 /*动画属性*/
