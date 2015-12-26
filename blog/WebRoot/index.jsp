@@ -1,6 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     %>
+<jsp:directive.page import="com.blog.dao.*"/>
+<jsp:directive.page import="com.blog.entity.*"/>
+<jsp:directive.page import="java.util.List"/>
+ <%
+ 	ArticleDao ad=new ArticleDao();
+ 	int curPage=1;
+ 	if(request.getAttribute("curPage")!=null)
+ 	{curPage=(int)request.getAttribute("curPage");}
+ 	System.out.println(curPage);
+ 	Pager p=new Pager(curPage,10,ad.allArticle()); 
+ 	List<Article> list=p.getDataList();
+ 	System.out.println(list.get(0).getaTitle());
+ %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,6 +25,10 @@
 <link rel="stylesheet" type="text/css" href="./res/css/index.css">
 <script src="./res/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="./res/js/index.js" type="text/javascript"></script>
+<script>
+
+
+</script>
 </head>
 
 <body>
@@ -31,8 +48,8 @@
 <a><img class="search-btn" src="res/imgs/search-default.png"></a>
 <input placeholder="搜索文章">
 </div>
-  <a class="write" href="./user/EditArticle.jsp">提笔</a>
-  <a href="./login.jsp" class="login-reg">登录/注册</a>
+  <a class="write" href="/blog/user/EditArticle.jsp">提笔</a>
+  <a href="login.jsp" class="login-reg">登录/注册</a>
 
 </div>
 </div>
@@ -55,7 +72,7 @@
 		<a class="profile"></a>
 		<a class="author">我是作者</a><a class="tag">父标签</a>
 		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
+		<h2><%=list.get(0).getaTitle()%></h2>
 		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
 	</div>
 	</li>

@@ -208,6 +208,9 @@ input
 	padding-top: 20px;
 	padding-left:50px;
 }
+.overlay-login,.overlay-mailsent{
+	padding-top:200px;
+}
 h2{
 	font-family: sans-serif;
 	font-weight:bolder;
