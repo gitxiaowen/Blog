@@ -174,46 +174,6 @@ public class DBHelper {
 		conn.close();
 		return i;
 	}
-
- /******************************<<<<<<<<对数据库的操作>>>>>>>*********************************/
- 	//对数据库的增加、修改和删除的操作
-    public boolean executeUpdate(String sql) {
-         if (conn== null) {
-            getConnection();
-        }
-        try {
-            Statement stmt = conn.createStatement();
-            int iCount = stmt.executeUpdate(sql);
-            System.out.println("操作成功，所影响的记录数为" + String.valueOf(iCount));
-		    return true;
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-		    return false;
-        }   
-    }
-//对数据库的查询操作
-    public ResultSet executeQuery(String sql) {
-        ResultSet rs;
-        try {
-            if (conn == null) {
-                getConnection();
-            }
-            Statement stmt = conn.createStatement();
-            try {
-                rs = stmt.executeQuery(sql);
-            } catch (SQLException e) {
-                System.out.println(e.getMessage());
-                return null;
-            }
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            System.out.println("executeQueryError!");
-            return null;
-        }
-        return rs;
-    }
- /******************************<<<<<<<<对数据库的操作>>>>>>>*********************************/
-
 	/*
 	 * 测试类
 	 */

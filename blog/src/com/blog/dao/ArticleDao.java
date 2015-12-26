@@ -2,6 +2,7 @@ package com.blog.dao;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.blog.entity.*;
 import com.blog.utils.DBHelper;
 
@@ -85,5 +86,29 @@ public class ArticleDao {
 			e.printStackTrace();
 		}
 		return listArticle;
+	}
+	
+	public static int getMaxID() throws Exception
+	{
+		int id = 0;
+		String sql="select max(aID) aID from article";
+		ResultSet res=DBHelper.Query(sql);
+		if(res.next())
+		{
+			id=res.getInt("aID");
+		}
+		return id;
+	}
+	
+	public int addArticle(String title, String content, int author, int type) throws Exception
+	{
+		String sql="insert into article (aID,aTitle,aContent,aAuthor,aType) values(?,?,?,?,?)";
+		Object[] args=new Object[5];
+		args[0]=ArticleDao.getMaxID();
+		args[1]=title;
+		args[2]=content;
+		args[3]=author;
+		args[4]=type;
+		return DBHelper.NonQuery(sql, args);
 	}
 } 

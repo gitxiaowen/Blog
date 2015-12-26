@@ -4,9 +4,9 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts> 
 <!--文章管理操作的action  --> 	
-	<package name="article" extends="struts-default" namespace="/user">
+	<package name="article" extends="struts-default">
 		<action name="article_add" class="com.blog.action.ArticleAddAction">
-		<result name="success">../index.jsp</result>
+		<result name="success">/index.jsp</result>
 		</action>
 	</package>
 <!--用户登陆的action  -->

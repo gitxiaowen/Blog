@@ -6,10 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>编辑文章</title>
-<script src="../ckeditor/ckeditor.js"></script>
-<link href="../res/css/base.css" rel="stylesheet"/>
-<link href="../res/css/style.css" rel="stylesheet"/>
-<link href="../res/css/media.css" rel="stylesheet"/>
+<script src="./ckeditor/ckeditor.js"></script>
+<link href="./res/css/base.css" rel="stylesheet"/>
+<link href="./res/css/style.css" rel="stylesheet"/>
+<link href="./res/css/media.css" rel="stylesheet"/>
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
 <style type="text/css">
 /*为段落定义样式*/
@@ -43,8 +43,8 @@ span {color:#099;}
   	<td>
     				<span>作者:</span><input name="aAuthor"  style="width:100px"/>
 	    			<span>分类:</span><input name="aType"  style="width:100px"/>
-                    <input  type=submit value="发表帖子"/>
-                    <input  type=reset value="取消发表"/>
+                    <input  type="submit" value="发表帖子"/>
+                    <input  type="reset" value="取消发表"/>
        </td>
    </table>
    </s:form>
