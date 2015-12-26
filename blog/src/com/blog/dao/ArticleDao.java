@@ -16,9 +16,10 @@ import com.blog.utils.DBHelper;
 public class ArticleDao {
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		ArticleDao ad=new ArticleDao();
-		List<Article> list=ad.allArticle();
+		List<Article> list=ad.searchByTagName("云");
+		System.out.println(list.size());
 	}
 	/**
 	 * 查找所有的文章
@@ -68,21 +69,65 @@ public class ArticleDao {
 			while(res.next())
 			{
 				Article a=new Article();
-				a.setaID(res.getInt(0));
-				a.setaTitle(res.getString(1));
-				a.setaContent(res.getString(2));
-				a.setaPublishDate(res.getDate(3));
-				a.setAuthor(res.getInt(4));
-				a.setaType(res.getInt(5));
-				a.setaView(res.getInt(6));
-				a.setaUpvotes(res.getInt(7));
-				a.setaDownVotes(res.getInt(8));
+				a.setaID(res.getInt(1));
+				a.setaTitle(res.getString(2));
+				a.setaContent(res.getString(3));
+				a.setaPublishDate(res.getDate(4));
+				a.setAuthor(res.getInt(5));
+				a.setaType(res.getInt(6));
+				a.setaView(res.getInt(7));
+				a.setaUpvotes(res.getInt(8));
+				a.setaDownVotes(res.getInt(9));
 				listArticle.add(a);
 			}
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		return listArticle;
+	}
+	
+	/**
+	 * 根据便签ID查找名称
+	 * @param tagID
+	 * @return
+	 * @throws Exception 
+	 */
+	public String tNamebyID(int tagID) throws Exception
+	{
+		String tName = "";
+		String sql="select tName from articletype where tID=?";
+		Object[] args=new Object[1];
+		args[0]=tagID;
+		ResultSet res=DBHelper.Query(sql, args);
+		if(res.next())
+		{
+			 tName=res.getString(1);
+		}
+		return tName;
+	}
+	
+	public List<Article> searchByTagName(String tagname) throws Exception
+	{
+		List<Article> listArticle =new ArrayList<Article>();
+		String sql="SELECT * FROM v_allarticle WHERE tName LIKE CONCAT('%',?,'%')";
+		Object[] args=new Object[1];
+		args[0]=tagname;
+		ResultSet res=DBHelper.Query(sql, args);
+		while(res.next())
+		{
+			Article a=new Article();
+			a.setaID(res.getInt(1));
+			a.setaTitle(res.getString(2));
+			a.setaContent(res.getString(3));
+			a.setaPublishDate(res.getDate(4));
+			a.setAuthor(res.getInt(5));
+			a.setaType(res.getInt(6));
+			a.setaView(res.getInt(7));
+			a.setaUpvotes(res.getInt(8));
+			a.setaDownVotes(res.getInt(9));
+			listArticle.add(a);
 		}
 		return listArticle;
 	}

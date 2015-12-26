@@ -13,10 +13,10 @@
  * (1) http://ckeditor.com/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) http://ckeditor.com/builder/610a5edd5ca9a597c2e862d726c383f5
+ * (2) http://ckeditor.com/builder/c982bde40b34ae90ddf5b386e0b12ecf
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) http://ckeditor.com/builder/download/610a5edd5ca9a597c2e862d726c383f5
+ * (3) http://ckeditor.com/builder/download/c982bde40b34ae90ddf5b386e0b12ecf
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -25,7 +25,7 @@
  */
 
 var CKBUILDER_CONFIG = {
-	skin: 'bootstrapck',
+	skin: 'moono-dark',
 	preset: 'standard',
 	ignore: [
 		'.bender',
