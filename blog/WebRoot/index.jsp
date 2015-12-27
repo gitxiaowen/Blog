@@ -184,7 +184,7 @@ $(document).ready(function(){
     <div class="footer">
       <a href="">帮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;助</a>
       <a href="">开源项目</a>
-      <a href="">隐私条款</a>
+      <a href="/blog/admin/index.html">管理入口</a>
       <a href="aboutus.html">关于我们</a>
     </div>
   </div>
