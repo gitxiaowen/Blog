@@ -20,7 +20,7 @@
 </head>
 <body>
  	<div class="overlay overlay-login">
-		<button class="close">x</button>
+		<button class="close"></button>
 		<div class="container">
 		<h2>Share your ideas</h2>
 		<h4>输入邮箱，登录或创建账户</h4>

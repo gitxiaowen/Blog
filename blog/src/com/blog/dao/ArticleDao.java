@@ -21,6 +21,21 @@ public class ArticleDao {
 		List<Article> list=ad.searchByTagName("云");
 		System.out.println(list.size());
 	}
+	
+	public String[] getArticlebyID(int aID) throws Exception
+	{
+		String[] article=new String[2];
+		String sql="select aTitle,aContent from article where aID=?";
+		Object[] args=new Object[1];
+		args[0]=aID;
+		ResultSet res=DBHelper.Query(sql, args);
+		if(res.next())
+		{
+			article[0]=res.getString(1);
+			article[1]=res.getString(2);
+		}
+		return article;
+	}
 	/**
 	 * 查找所有的文章
 	 * @return 返回所有查找到的文章
@@ -108,6 +123,12 @@ public class ArticleDao {
 		return tName;
 	}
 	
+	/**
+	 * 根据标签名进行模糊查找
+	 * @param tagname
+	 * @return
+	 * @throws Exception
+	 */
 	public List<Article> searchByTagName(String tagname) throws Exception
 	{
 		List<Article> listArticle =new ArrayList<Article>();

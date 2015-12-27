@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+*{
+	margin:0;
+	padding:0;
+	text-decoration:none !important;
+}
+.aContent
+{
+	width:75%;
+	margin:auto;
+}
+.logo
+{
+	position:relative;
+	float:center;
+	margin:auto;
+	border-radius:20%;
+}
+a
+{
+	
+}
