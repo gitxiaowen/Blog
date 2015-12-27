@@ -1,7 +1,14 @@
 package com.blog.dao;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import org.apache.struts2.ServletActionContext;
 
 import com.blog.utils.DBHelper;
 
@@ -57,6 +64,12 @@ public static int RegUser(String email) throws SQLException, Exception
 		return DBHelper.NonQuery(sql, args);
 	}
 
+/**
+ * 通过用户ID查找用户名
+ * @param uID
+ * @return
+ * @throws Exception
+ */
 public static String UserNameByID(int uID) throws Exception
 	{
 		String uName = "";
@@ -70,4 +83,35 @@ public static String UserNameByID(int uID) throws Exception
 		}
 		return uName;
 	}
+	
+/**
+ * 根据用户ID查找到用户头像
+ * @param uID
+ * @return
+ * @throws Exception
+ */
+	public String genPicByID(int uID) throws Exception
+	{
+		String filename=java.util.UUID.randomUUID().toString()+".png"; 
+		String uploadPath = ServletActionContext.getServletContext().getRealPath("/cacheimage/");
+		System.out.println(uploadPath);
+		String sql="select uPicture from user where uID=? ";
+		Object[] args=new Object[1];
+		args[0]=uID;
+		ResultSet res = DBHelper.Query(sql, args);
+		if(res.next())
+		{
+			InputStream in=res.getBinaryStream("head");
+			File file = new File(uploadPath,filename);
+			OutputStream out = new BufferedOutputStream(new FileOutputStream(file));
+			byte[] buff= new byte[1024];
+			for(int i=0;(i=in.read(buff))>0;)
+			{
+				out.write(buff,0,i);
+		}
+			out.close();
+		}
+		return filename;
+	}
+
 }

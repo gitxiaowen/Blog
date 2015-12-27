@@ -5,9 +5,6 @@ import com.opensymphony.xwork2.ActionSupport;
 public class PublishArticle extends ActionSupport {
 
 	private String aContent;
-	
-	
-	
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub

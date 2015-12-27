@@ -9,10 +9,8 @@
  	int curPage=1;
  	if(request.getAttribute("curPage")!=null)
  	{curPage=(int)request.getAttribute("curPage");}
- 	System.out.println(curPage);
  	Pager p=new Pager(curPage,10,ad.allArticle()); 
  	List<Article> list=p.getDataList();
- 	System.out.println(list.get(0).getaTitle());
  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -58,7 +56,9 @@ $(document).ready(function(){
   	out.print("<a href=\"login.jsp\" class=\"login-reg\">登录/注册</a>");
   	else{
 	  out.print("<span class=\"add-on icon\"><i class=\"icon-bell-alt\"></i></span>");
-	  out.print("<a class=\"loginpic\"></a>");
+	  out.print("<a class=\"loginpic\">");
+	  out.print("<img width=\"25px\" height=\"25px\" src=\"");
+	  out.print("./res/imgs/logo.png\"></a>");
   }
   %>
   

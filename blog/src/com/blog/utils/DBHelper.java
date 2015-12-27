@@ -223,16 +223,7 @@ public class DBHelper {
 //			ps.setBinaryStream(1,in, (int)file.length());
 //			int i = ps.executeUpdate();
 //			System.out.println(i);
-			String sql="select uID from user where uName=? and uPassword=?";
-			Object[] obj=new Object[]{"dolby","YmxvZw=="};
-			ResultSet res = DBHelper.Query(sql, obj);
-			while(res.next())
-			{
-				System.out.println(res.getRow());
-			}
-			
-			
-			
+
 			//更新文件
 //			Object[] parms = new Object[]{"1"};
 //			DBHelper.uploadfile("UPDATE user SET head=? WHERE uid = ?", "D:\\Courses\\Basical English\\Resources\\Al Pacino\\god father.jpg", parms);

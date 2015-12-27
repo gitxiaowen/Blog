@@ -39,6 +39,7 @@ public class Pager implements Serializable{
 	 */
 	public Pager(int pageNum, int pageSize,List<Article> listArticle)
 	{
+		
 		if(listArticle==null)
 		{
 			return;

@@ -10,7 +10,10 @@
 		</action>
 		<!-- 查找按钮的Action -->
 		<action name="SearchAction" class="">
-		
+		</action>
+		<!-- 跳转到查看博文页面 -->
+		<action name="viewAction" class="com.blog.action.ViewAction">
+		<result name="success">Article.jsp</result>
 		</action>
 	</package>
 	<!-- 发布文章的Action -->
