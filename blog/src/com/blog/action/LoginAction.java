@@ -7,6 +7,7 @@ import com.blog.dao.LoginDao;
 import com.blog.dao.UserDao;
 import com.blog.entity.User;
 import com.blog.utils.Email;
+import com.blog.utils.Encrypt;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -41,17 +42,17 @@ public class LoginAction extends ActionSupport {
 		System.out.println(getEmail());
 		//如果为新用户，发送创建账户的邮件，并插入数据库中
 		if(!LoginDao.isNewUser(getEmail()))
-		{
-			//发送邮件
-			System.out.println("进入");
-//			Email.sendMail(getEmail(), "");
+		{//发送邮件
 			//注册此账户
 			UserDao ud=new UserDao();
-			ud.RegUser(getEmail());		
+			ud.RegUser(getEmail());	
+			String token="";
+			token=Encrypt.Encode(ud.getToken(getEmail()));	
+			Email.sendMail(getEmail(), Email.getMessage("http://localhost/blog/callbackAction?token="+token));
+			System.out.println(token);
 		}
 		else
 		{
-			
 		}
 		return "success";
 	}
