@@ -128,8 +128,15 @@ public class ArticleDao {
 		String sql="delete from article where aID='?";
 		return 0;
 	}
-	public int updateArticle(){
-		String sql="update into article()values()";
+	/**
+	 * 更新文章
+	 * @param tID
+	 * @return
+	 */
+	public int updateArticle(String title,String count,String author,String Type)throws Exception{
+		String sql="update article set aTitle=?,aCount=?,aAuthor=?,aType=? ";
+		Object[] args=new Object[4];
+		args[0]=title;
 		return 0;
 	}
 } 
