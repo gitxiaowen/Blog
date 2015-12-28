@@ -15,10 +15,15 @@
 		<action name="viewAction" class="com.blog.action.ViewAction">
 		<result name="success">Article.jsp</result>
 		</action>
+		<action name="searchAction" class="com.blog.action.SearchAction">
+		<result name="success">result.jsp</result>
+		
+		
+		</action>
 	</package>
 	<!-- 发布文章的Action -->
 	<package name="article" extends="struts-default" namespace="/user">
-		<action name="Publish" class="com.blog.action.BlogAction">
+		<action name="publishAction" class="com.blog.action.PublishArticle">
 		<result name="success">../index.jsp</result>
 		</action>
 	</package>

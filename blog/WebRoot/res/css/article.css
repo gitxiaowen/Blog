@@ -14,9 +14,13 @@
 	position:relative;
 	float:center;
 	margin:auto;
-	border-radius:20%;
+	border-radius:20%;  
 }
 a
 {
 	
+}
+
+img {
+    cursor: pointer;
 }

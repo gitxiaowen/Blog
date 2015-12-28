@@ -14,6 +14,7 @@ input：focus{
     inline:none;
 }
 a{
+	/* font-family: serif; */
 	color:black;
 	text-decoration:none;
 	display:inline-block;
@@ -43,9 +44,20 @@ text-decoration:none;
 	height: 100%;
 }
 .nav-item{
+	margin-left: 40px;
+	font-style: bold;
+	text-align: center;
 	height: 65px;
 	width:84px;
 	float: left;
+	line-height: 4.2;
+}
+
+.nav-item a {
+    font-weight: bold;
+    color: gray;
+  /*  display:block;
+    border-bottom:2px solid #000;*/
 }
 .nav-right{
 	float: right;
@@ -70,6 +82,7 @@ text-decoration:none;
 	border:0;
 }
 .search a {
+	z-index: 999;
 	/*background-image:"/res/imgs/search-default.png";*/
 }
 .write,.login-reg{
@@ -129,9 +142,9 @@ text-decoration:none;
 /**文章主体部分的样式*/
 .article{
 	overflow:hidden;
-	width: 600px;
+	width: 700px;
 	height: 400px;
-	background: rgba(0,0,0,0.1);
+	/* background: rgba(0,0,0,0.1); */
 	margin-bottom: 10px;
 	border-bottom:2px solid rgba(0,0,0,0.2);
 }
@@ -149,6 +162,9 @@ text-decoration:none;
 	color:#02b875;
 	margin-left:10px;
 	transform:translateY(-25px);
+}
+.title{
+	/* display:block; */
 }
 .article .tag
 {	margin-left:20px;
@@ -238,7 +254,7 @@ input
 .container{
 	margin: auto;
 	padding-top: 20px;
-	padding-left:50px;
+	padding-left: 80px;
 }
 .overlay-login,.overlay-mailsent{
 	padding-top:200px;
@@ -324,4 +340,17 @@ h4{
 	0%   {-webkit-transform:rotateX(90deg);}
 	50%  {-webkit-transform:rotateX(45deg);}
 	100% {-webkit-transform:rotateX(0deg);}
+}
+
+li.nav-item {}
+
+a.picked {
+    display: block;
+    color: black;
+    border-bottom: 2px solid #000000;
+    /* border-bottom-width: 15px; */
+}
+
+a.hot:hover {
+    border-bottom: 1px silver #000000;
 }

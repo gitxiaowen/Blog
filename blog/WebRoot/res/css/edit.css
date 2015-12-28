@@ -17,10 +17,10 @@ input[name="title"]
 .btn-publish
 {
 	display:inline-block;
-	padding-top: 10px;
-    transform: translateY(-8px);
+    transform: translate(570px,-58px);
 }
 .publish{
+	
 	border: 1px solid rgba(0,0,0,0.15);
 	border-radius: 999em;
 	cursor: pointer;
@@ -40,7 +40,29 @@ input[name="title"]
 	color:#00ef73;
 	border-color: #00ef73;
 }
-
+.aType{
+	border-radius: 50%;
+    display: inline-block;
+    padding-bottom: -14px;
+    padding-left: 620px;
+    /* display: block; */
+    /* font-size: 1.7em; */
+    transform: translate(385px,-35px);
+}
+table:
+{
+	transform: translateY(-35px);
+}
 .cke_1_contents{
 	height:512px;
+}
+#cke_content
+{
+	 transform: translateY(-35px);
+}
+select
+{
+	font-size: 1.3em;
+    border-radius: 999em;
+    padding: 0 4px;
 }
