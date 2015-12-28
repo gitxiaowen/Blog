@@ -87,84 +87,8 @@ $(document).ready(function(){
 	out.print(list.get(i).getaContent()+"</div>");
 	out.print("</div></li>");
 	}%>
-<!-- li class="article">
-	<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div>
-  </li>
-<li class="article">
-<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2><%=list.get(0).getaTitle()%></h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div>
-	</li>
-<li class="article">
- <div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div>
-	</li>
-<li class="article">
-<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div>
-</li>
-<li class="article">
-<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div>
-	</li>
-<li class="article">
-<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div></li>
-<li class="article">
-<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div></li>
-<li class="article">
-<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div></li>
-<li class="article">
-<div class="a-top">
-		<a class="profile"></a>
-		<a class="author">我是作者</a><a class="tag">父标签</a>
-		<a class="publishtime">五天前 ·</a><a class="readcount">8w人已阅</a>
-		<h2>这是文章的标题！</h2>
-		<a class="content" href="#">我都说了这是文章的内容，你就不要再乱搞了fasdf！fdasfasfdsafdasfasfewqfdasfdsafadsrefdasfsadfsafeqfdsafdasf</a>
-	</div></li>
-<li class="article">
+
+<!--li class="article">
 <div class="a-top">
 		<a class="profile"></a>
 		<a class="author">我是作者</a><a class="tag">父标签</a>
@@ -180,7 +104,20 @@ $(document).ready(function(){
 <!-- 侧边栏部分 -->
 <div class="sidebar">
   <div class="sidebar-container">
-    <div class="tags"></div>
+    <div class="tags">
+    <hr color="0f0f0f" width="100%">
+    <h2>热门标签</h2>
+    <a class="tags-item">移动开发</a>
+    <a class="tags-item">Web前端</a>
+    <a class="tags-item">架构设计</a>
+    <a class="tags-item">编程语言</a>
+    <a class="tags-item">互联网</a>
+    <a class="tags-item">数据库</a>
+    <a class="tags-item">系统运维</a>
+    <a class="tags-item">研发管理</a>
+    <a class="tags-item">综合讨论区</a>
+    
+    </div>
     <div class="footer">
       <a href="">帮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;助</a>
       <a href="">开源项目</a>

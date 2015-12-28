@@ -8,13 +8,17 @@
     <link href="/blog/res/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="/blog/res/css/index.css" type="text/css" rel="stylesheet">
 
+
   </head>
   <style type="text/css">
   h1{font-family:STxingkai;color:#02b875;font-size:60px;}
+.close{
+	opacity:90%;
+  }
   </style>
   <body>
     <div class="overlay overlay-mailsent">
-		<button class="close">×</button>
+	<img onclick=window.open("/blog/index.jsp","_self")  class="close" width="45"  height="45" src="/blog/res/imgs/logo_transparent.png">
 		<div class="container">
 		<h1>竹博网</h1>
 		<h4>我们已经向您的邮箱发送了一个链接来创建账户</h4>

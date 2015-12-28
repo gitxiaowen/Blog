@@ -281,6 +281,8 @@ table tr:nth-child(2n) {
 
 img {
   max-width: 100%
+;
+  cursor: pointer !important;
 }
 </style>
 <style type="text/css">

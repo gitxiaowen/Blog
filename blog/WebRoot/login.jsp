@@ -20,13 +20,13 @@
 </head>
 <body>
  	<div class="overlay overlay-login">
-		<button class="close"></button>
+		<img onclick=window.open("/blog/index.jsp","_self")  class="close" width="45"  height="45" src="/blog/res/imgs/logo_transparent.png">
 		<div class="container">
 		<h2>Share your ideas</h2>
 		<h4>输入邮箱，登录或创建账户</h4>
 		<input id="email" name="email" placeholder="yourname@example.com"><br>
 		<a class="login" name="login" type="submit">登录</a> 
-		<a href="#" class="cancel">取消</a>
+		<a href="/blog/index.jsp" class="cancel">取消</a>
 		</div>
 	</div>
 </body>

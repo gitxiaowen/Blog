@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     <jsp:directive.page import="com.blog.dao.*"/>
     <%
+   	    String tagName=(String)request.getAttribute("tagName");
     	int  aID=0;
     	ArticleDao ad=new ArticleDao();
     	String[] article=ad.getArticlebyID(aID);
@@ -20,7 +21,7 @@
 </head>
 <body>
 <!--navbar部分-->
-<a class="logo"><img alt="" src="" width="45" height="45" ></a>
+<img onclick=window.open("/blog/index.jsp","_self") sclass="logo" alt="" src="/blog/res/imgs/logo_transparent.png" width="45" height="45" >
 <center><h2><%=aTitle%></h2></center>
 <div class="aContent"><%=aContent%>
 </div>
