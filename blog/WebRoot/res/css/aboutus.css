@@ -29,11 +29,10 @@
 	margin-left:50%;
 	margin-right: auto;
 	margin-top: auto;
-	background: red;
 }
 #aboutus
 {
-	background:#2DA94F;
+	background-image:url("/blog/res/imgs/bac.jpg");
 }
 .profiles
 {
@@ -51,17 +50,17 @@
 
 #xxw
 {
-	background: #2085A1;
+	background: #fb007d;
 }
 #abiao {
-	background: #ED412D;
+	background: #11ff4d;
 }
 #zhao {
-	background: #4c4c4c;
+	background: #00e1e1;
 }
 #han {
-	background: #FD6720;
+	background: #ffff15;
 }
 #lu {
-	background: #4EA63A;
+	background: #acacac;
 }
