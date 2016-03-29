@@ -20,7 +20,7 @@
     <div class="overlay overlay-mailsent">
 	<img onclick=window.open("/blog/index.jsp","_self")  class="close" width="45"  height="45" src="/blog/res/imgs/logo_transparent.png">
 		<div class="container">
-		<h1>竹博网</h1>
+		<h1>竹帛网</h1>
 		<h4>我们已经向您的邮箱发送了一个链接来创建账户</h4>
 		<h4>请检查您的收件箱</h4>
 		<a href="/blog/index.jsp" class="login">好的</a><br>

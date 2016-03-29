@@ -1,1 +1,10 @@
 @CHARSET "UTF-8";
+
+h2.result {
+    text-align: center;
+}
+
+
+.container {
+    padding-left: 250px;
+}

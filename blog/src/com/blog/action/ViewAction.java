@@ -20,25 +20,25 @@ import com.opensymphony.xwork2.ActionSupport;
 *@version 1.0
 */
 public class ViewAction extends ActionSupport{
-	private String aID;
 	
+	
+	private String aID;
 	/* (non-Javadoc)
 	 * @see com.opensymphony.xwork2.ActionSupport#execute()
 	 */
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub.
-		System.out.println(aID);
+		System.out.println(getaID());
 		return SUCCESS;
 	}
-
 	public String getaID() {
 		return aID;
 	}
-
 	public void setaID(String aID) {
 		this.aID = aID;
 	}
+	
 
 
 	

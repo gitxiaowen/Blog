@@ -28,8 +28,7 @@
 $(document).ready(function(){
 	$(".search-btn").click(function(){
 		var tag=$(".searchinput").val();
-		alert(tag);
-		$(".search a']").attr('href','SearchAction?tag='+tag);
+		$(".searcha").attr('href','searchAction?tagName='+tag);
 	});
 });
 </script>
@@ -40,7 +39,7 @@ $(document).ready(function(){
 <div class="nav">
 <div class="nav-left">
 <ul class="nav-list">
-  <li class="nav-item"><a href="#" class="logo">Whut Blog</a></li>
+  <li class="nav-item"><a href="/blog/index.jsp" class="logo" checked="true"><img width="50" height="50" src="/blog/res/imgs/logo.png"></a></li>
   <li class="nav-item"><a href="#" class="picked">精选文章</a></li>
   <li class="nav-item"><a href="#" class="hot">热门文章</a></li>
   <li class="nav-item"><a href="#" class="tags">文章标签</a></li>
@@ -48,7 +47,7 @@ $(document).ready(function(){
 </div>
 <div class="nav-right">
 <div class="search">
-<a><img class="search-btn" src="res/imgs/search-default.png"></a>
+<a class="searcha"><img class="search-btn" src="res/imgs/search-default.png"></a>
 <input class="searchinput" placeholder="搜索文章">
 </div>
   <a class="write" href="/blog/user/EditArticle.jsp">提笔</a>
@@ -82,8 +81,10 @@ $(document).ready(function(){
 	out.print(list.get(i).getaPublishDate().toString());
 	out.print(" ·</a><a class=\"readcount\">");
 	out.print(list.get(i).getaView()+"人已阅</a>");
-	out.print("<h2>"+list.get(i).getaTitle()+"</h2>");
-	out.print("<div class=\"content\" href=\"#\">");
+	out.print("<a class=\"titilewraper\" href='");
+	out.print("viewAction?aID="+String.valueOf(list.get(i).getaID()));	
+	out.print("'><h2>"+list.get(i).getaTitle()+"</h2></a>");
+	out.print("<div class=\"content\" href=\"\">");
 	out.print(list.get(i).getaContent()+"</div>");
 	out.print("</div></li>");
 	}%>
@@ -107,20 +108,20 @@ $(document).ready(function(){
     <div class="tags">
     <hr color="0f0f0f" width="100%">
     <h2>热门标签</h2>
-    <a class="tags-item">移动开发</a>
-    <a class="tags-item">Web前端</a>
-    <a class="tags-item">架构设计</a>
-    <a class="tags-item">编程语言</a>
-    <a class="tags-item">互联网</a>
-    <a class="tags-item">数据库</a>
-    <a class="tags-item">系统运维</a>
-    <a class="tags-item">研发管理</a>
-    <a class="tags-item">综合讨论区</a>
+  <a class="tags-item" href="searchAction?tagName=移动开发">移动开发</a>
+    <a class="tags-item" href="searchAction?tagName=Web前端">Web前端</a>
+    <a class="tags-item" href="searchAction?tagName=架构设计">架构设计</a>
+    <a class="tags-item" href="searchAction?tagName=编程语言">编程语言</a>
+    <a class="tags-item" href="searchAction?tagName=互联网">互联网</a>
+    <a class="tags-item" href="searchAction?tagName=数据库">数据库</a>
+    <a class="tags-item" href="searchAction?tagName=系统运维">系统运维</a>
+    <a class="tags-item" href="searchAction?tagName=研发管理">研发管理</a>
+    <a class="tags-item" href="searchAction?tagName=综合讨论">综合讨论区</a>	
     
     </div>
     <div class="footer">
       <a href="">帮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;助</a>
-      <a href="">开源项目</a>
+      <a href="http://github.com/gitxiaowen/Blog">开源项目</a>
       <a href="/blog/admin/index.html">管理入口</a>
       <a href="aboutus.html">关于我们</a>
     </div>

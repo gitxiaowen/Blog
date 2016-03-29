@@ -17,11 +17,12 @@
 
 <link rel="stylesheet" href="/blog/res/css/markdown.css" type="text/css">
 <link rel="stylesheet" href="/blog/res/css/article.css" type="text/css">
-<title>这里插入文章标题好了</title>
+<title><%=aTitle%></title>
 </head>
 <body>
 <!--navbar部分-->
 <img onclick=window.open("/blog/index.jsp","_self") sclass="logo" alt="" src="/blog/res/imgs/logo_transparent.png" width="45" height="45" >
+
 <center><h2><%=aTitle%></h2></center>
 <div class="aContent"><%=aContent%>
 </div>

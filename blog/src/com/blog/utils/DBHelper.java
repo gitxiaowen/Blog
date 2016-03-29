@@ -25,7 +25,7 @@ import java.sql.SQLException;
 public class DBHelper {
 
 	private static String driver ="com.mysql.jdbc.Driver";
-	private static String url="jdbc:mysql://rdsw226dv20x25tx745ho.mysql.rds.aliyuncs.com:3306/blog?userUnicode=true&characterEncoding=UTF-8";
+	private static String url="jdbc:mysql://112.74.1.47:3306/blog?userUnicode=true&characterEncoding=UTF-8";
 	private static String username="blog";
 	private static String password="blog_2015";
 	private static Connection conn=null;

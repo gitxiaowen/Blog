@@ -133,7 +133,7 @@ text-decoration:none;
 	background:red;
 	border-radius:50%;
 	margin-left:40px;
-	transform:translateY(10px);
+	/* transform: translateY(-0px); */
 }
 .loginpic img{
 	width:100%;
@@ -141,12 +141,13 @@ text-decoration:none;
 }
 /**文章主体部分的样式*/
 .article{
+	/* padding-bottom: 15px; */
 	overflow:hidden;
 	width: 700px;
-	height: 400px;
+	height: 410px;
 	/* background: rgba(0,0,0,0.1); */
 	margin-bottom: 10px;
-	border-bottom:2px solid rgba(0,0,0,0.2);
+	/* border-bottom:2px solid rgba(0,0,0,0.2); */
 }
 .article .profile{
 	width:45px;
@@ -171,7 +172,7 @@ text-decoration:none;
 }
 .readcount,.publishtime{
 	transform:translateY(-105px);
-	transform:translateX(-110px);
+	transform: translateX(-100px);
 	font-color:gray;
 }
 .a-top{
@@ -260,9 +261,9 @@ input
 	padding-top:200px;
 }
 h2{
-	font-family: sans-serif;
+	/* font-family: sans-serif; */
 	font-weight:bolder;
-	font-size: 3em;
+	font-size: 2em;
 }
 h4{
 	padding-top: 5px;
@@ -341,7 +342,9 @@ h4{
 	50%  {-webkit-transform:rotateX(45deg);}
 	100% {-webkit-transform:rotateX(0deg);}
 }
-
+a.question {
+    transform: translateX(15px);
+}
 li.nav-item {}
 
 a.picked {
@@ -353,4 +356,16 @@ a.picked {
 
 a.hot:hover {
     border-bottom: 1px silver #000000;
+}
+
+a.question {
+    transform: translateX(15px);
+}
+.titilewraper
+{
+	display:block;
+}
+.titilewraper:hover
+{
+	cursor:pointer;
 }

@@ -20,7 +20,8 @@
 <script src="./res/js/jquery-1.11.2.min.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="container">
+<h2 class="result">搜索列表</h2>
+<div class="container" style="margin:15px auto">
 <!-- 主题文章部分 -->
 <ul class="articles">
 

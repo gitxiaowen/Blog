@@ -12,7 +12,6 @@
 	$(document).ready(function(){
 		$("a[name='login']").click(function(){
 			var email=$("#email").val();
-			alert(email);
 			$("a[name='login']").attr('href','LoginAction?email='+email);
 		});
 	});
